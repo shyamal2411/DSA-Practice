@@ -15,7 +15,7 @@ node(int value) //information to be stored
  }
 };
 int main()
-{
+{       cout<<"Just trying Git";
     //create root node
     struct node* root= new node(1);
     root->left=new node(2);
