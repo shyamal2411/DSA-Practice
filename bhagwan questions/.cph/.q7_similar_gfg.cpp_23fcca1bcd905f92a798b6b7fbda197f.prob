@@ -1,0 +1,1 @@
+{"name":"Local: q7_similar_gfg","url":"d:\\codes\\bhagwan questions\\q7_similar_gfg.cpp","tests":[{"id":1605176310506,"input":"5\n1 3 5 7 9\n2\n3\n5","output":"5 7 9 1 3 \n7 9 1 3 5 \n1 3 5 7 9"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\bhagwan questions\\q7_similar_gfg.cpp","group":"local","local":true}

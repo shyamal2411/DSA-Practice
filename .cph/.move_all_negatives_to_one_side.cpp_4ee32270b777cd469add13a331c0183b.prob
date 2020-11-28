@@ -1,0 +1,1 @@
+{"name":"Local: move_all_negatives_to_one_side","url":"d:\\codes\\move_all_negatives_to_one_side.cpp","tests":[{"id":1606453227313,"input":"6\n-1 2 -3 5 -7 7","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\move_all_negatives_to_one_side.cpp","group":"local","local":true}

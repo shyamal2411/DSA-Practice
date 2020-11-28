@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"gruvbox",
+		"Gruvbox Dark",
+		"Package Control",
+		"SublimeAStyleFormatter",
+		"Theme - Arc",
+		"Theme - Aristocat",
+		"Theme - Brogrammer",
+		"Theme - Gravity",
+		"Theme - Spacegray"
+	]
+}

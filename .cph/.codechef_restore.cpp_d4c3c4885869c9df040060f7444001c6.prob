@@ -1,0 +1,1 @@
+{"name":"Local: codechef_restore","url":"d:\\codes\\codechef_restore.cpp","tests":[{"id":1605465781842,"input":"2\n5\n5 2 3 4 5\n4\n4 4 4 4","output":"2 6 5 3 4\n2 6 3 12"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\codechef_restore.cpp","group":"local","local":true}
