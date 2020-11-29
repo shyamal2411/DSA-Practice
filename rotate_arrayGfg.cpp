@@ -3,24 +3,27 @@
 #include <string>
 using namespace std;
 #define ll long long
-#define fo(i, n) for (int i = 0; i < int n; i++)
 
 void rotate(int arr[], int n) {
-  int x = arr[n - 1], i;
-  for (i = n - 1; i > 0; i--)
+  int x = arr[n - 1], i; //last element is stored in x
+  for (i = n - 1; i > 0; i--) //one by one all the other elements are shifted one positioon ahead.
     arr[i] = arr[i - 1];
-  arr[0] = x;
+  arr[0] = x; // the first element is stored in x.
 }
 
-printarr(int arr, int n) {
+int printarr(int arr, int n) {
   cout << "\nRotated Array:\n";
-  fo(i, n) cout << arr[i] << " ";
+  for (int i = 0; i < n; i++) {
+    cout << arr[i] << " ";
+  }
 }
 int main() {
-  ll int n, k, t, i, p, q, r, s, count = 0, j;
+  int n, k, t, i, p, q, r, s, count = 0, j;
   cin >> n;
   int arr[n];
-  fo(i, n) cin >> arr[i];
+  for (i = 0; i < n; i++) {
+    cin >> arr[i];
+  }
 
   rotate(arr, n);
   printarr(arr, n);
