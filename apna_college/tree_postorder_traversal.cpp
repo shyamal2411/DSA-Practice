@@ -4,7 +4,7 @@ using namespace std;
 struct node {
   int data;
   struct node* left; //same as linkedlist
-  strut node* right;
+  struct node* right;
 };
 //! CREATE NODE
 //* SAME AS PREORDER
@@ -31,7 +31,7 @@ struct node* insertnode(struct node* node, int val) {
     node->left = insertnode(node->left, val);
 
   else if (val > node->data)
-    node > right = insertnode(node->right, val);
+    node -> right = insertnode(node->right, val);
   return node;
 }
 
