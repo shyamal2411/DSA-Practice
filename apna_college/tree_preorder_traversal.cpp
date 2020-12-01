@@ -7,7 +7,7 @@ struct node {
   struct node* right;
 };
 //! CREATE NODE
-struct node* createnode(int val) {
+struct node* createnode(int val) {                                                                                                                                                                                   
   struct node* temp = new struct node;  // use this method to allocate memory.
   // struct node* temp = (struct node*)malloc(sizeof(struct node)); //new node
   // is formed.
