@@ -6,7 +6,7 @@ struct node {
   int data;
   struct node* right;
 };
-
+//! CREATE NODE
 struct node* createnode(int val) {
   struct node* temp = (struct node*)malloc(sizeof(struct node));
   temp->data = val;
@@ -14,6 +14,7 @@ struct node* createnode(int val) {
   temp->left = NULL;
   // temp->left=temp->right=NULL;
 };
+//! PREORDER FUNCTION
 void preorder(struct node* root) {
   if (root != NULL) {
     cout << root->data << " ";
@@ -21,6 +22,7 @@ void preorder(struct node* root) {
     preorder(root->right);
   }
 }
+//! NODE INSERTION
 struct node* insertnode(struct node* node, int val) {
   if (node == NULL)
     return createnode(val);
