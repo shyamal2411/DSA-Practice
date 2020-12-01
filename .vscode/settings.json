@@ -1,6 +1,12 @@
 {
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "initializer_list": "cpp",
+        "regex": "cpp",
+        "utility": "cpp",
+        "valarray": "cpp"
     },
     "C_Cpp.dimInactiveRegions": false,
     "better-comments.highlightPlainText": true,
