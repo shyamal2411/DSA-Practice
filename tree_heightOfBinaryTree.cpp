@@ -24,7 +24,7 @@ int height(node* node) {
     int Ldepth = height(node->left);
     int Rdepth = height(node->right);
     if (Ldepth > Rdepth)
-      return (Ldepth + 1);
+      return (Ldepth + 1); //+1 might be for including the root node
     else
       return (Rdepth + 1);
   }
