@@ -8,10 +8,12 @@ using namespace std;
 
 int getbit(int n,int pos)
 {
-    return
+    return ((n & (1<<pos))!=0);
 }
 
 int main(){
     ll int n,k,t,i,p,q,r,s,count=0,j;
-    
+
+cout<<getbit(5,2)<<endl;
+    return 0;   
 }

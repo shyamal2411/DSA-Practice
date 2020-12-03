@@ -8,12 +8,13 @@ using namespace std;
 
 int main() {
   ll int n, k, x, t, i, p, q, r, s, count = 0, j;
-  cin >> n >> k;//number of players and size of list.
+  cin >> n >> k;  // number of players and size of list.
   ll int arr[n];
-  fo(i, n) arr[i] = 0; //as said in tutorial- to initiate all elements to 0 for frequency
+  fo(i, n) arr[i] =
+      0;  // as said in tutorial- to initiate all elements to 0 for frequency
 
   fo(i, k) {
-    cin >> x; //players
+    cin >> x;  // players
     if (arr[x - 1] == 0)
       arr[x - 1] = 1;
   }
@@ -26,7 +27,7 @@ int main() {
     cout << "YES" << endl;
   else
     cout << "NO" << endl;
-    return 0;
+  return 0;
 }
 /*
 //! code from the tutorial-solution
@@ -49,4 +50,3 @@ int main()
         }
 }
 */
-
