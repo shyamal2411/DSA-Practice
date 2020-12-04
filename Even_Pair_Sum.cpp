@@ -20,6 +20,7 @@ int main() {
     q2 = q - p2;  // odd numbers out of q
     ans = p1 * p2 + q1 * q2;  // sum of even numbers can be sum of odd+odd and
                               // even+even but can never be odd+even
+                              //similarly to find only the odd sums, do odd+even.
     cout << ans << "\n";
   }  // end of while
   return 0;
