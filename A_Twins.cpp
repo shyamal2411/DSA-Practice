@@ -14,18 +14,23 @@ int main(){
       sum = 0;
       fo(i, n) {
         cin >> arr[i];
-        sum += arr[i];
+        sum += arr[i]; //adding up the money.
       }  // end of for
       sum = sum / 2;
-      sort(arr, arr + n);
+    
+      sort(arr, arr + n); //sorting in ascending order of value
+    
       count = 0;
       int ans = 0;
+    
       fo(i, n) {
         ans += arr[i];
         count++;
+    
         if (ans > sum)
           break;
       }
+    
       cout << count << endl;
     }  // end of while
  return 0;
