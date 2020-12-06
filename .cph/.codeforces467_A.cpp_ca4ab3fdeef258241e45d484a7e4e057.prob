@@ -1,0 +1,1 @@
+{"name":"Local: codeforces467_A","url":"d:\\codes\\codeforces467_A.cpp","tests":[{"id":1607278913058,"input":"3\n1 1\n2 2\n3 3\n","output":""},{"id":1607278923383,"input":"3\n1 10\n0 10\n10 10\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\codeforces467_A.cpp","group":"local","local":true}

@@ -1,36 +1,22 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-void solve();
-int main()
-{
-	ios_base::sync_with_stdio(false); cin.tie(NULL);
-
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("error.txt", "w", stderr);
-	freopen("output.txt", "w", stdout);
-#endif
-
-	int t = 1;
-	cin >> t;
-	while (t--)
-	{
-		solve();
-		cout << "\n";
-	}
-
-	cerr << "time taken : " << (float)clock() / CLOCKS_PER_SEC << " secs" << endl;
-	return 0;
-}
-void solve()
-{
-	int n, p, q, space = 0;
-	cin >> n;
-	while (n--)
-	{
-		cin >> p >> q;
-		if (p < q)
-			space++;
-	}
-	cout << space;
+// https://codeforces.com/problemset/problem/467/A
+// revised:06-12-2020
+int main() {
+  int n, p, q, space = 0;
+  cin >> n;
+  while (n--) {
+    // cin >> p >> q;
+    // if (p < q)
+    // 	space++;  //wrong solution for cases like1 2
+    // 2 3
+    // 3 4 because ama 1 person accomodate thai ske, question ma 2 persons ne
+    // accomodate thava nu kahyu che
+    cin >> p >> q;
+    if (q - p >= 2)  // this serves both the purposes, both can accomodate in
+                     // this condition!
+      space++;
+  }
+  cout << space;
 }
