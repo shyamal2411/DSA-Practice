@@ -1,0 +1,1 @@
+{"name":"Local: SumOfNnumbers","url":"d:\\codes\\Recursion\\SumOfNnumbers.cpp","tests":[{"id":1607315430089,"input":"4","output":""},{"id":1607315471179,"input":"3","output":""},{"id":1607315515268,"input":"5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\Recursion\\SumOfNnumbers.cpp","group":"local","local":true}
