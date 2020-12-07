@@ -13,6 +13,19 @@ if(i==n)
 
     return firstOccur(arr,n,i+1,key);
 }
+
+int lastOccur(int arr[],int n,int i,int key)
+{
+    int restArray=lastocc(arr,n,i+1,key);
+    if(resArray!=-1){
+        return restArray;
+    }
+    if(arr[i]==key)
+    {
+        return i;
+    }
+    return -1;
+}
 int main(){
     int arr[]={4,5,6,7,8,9};
     cout<<firstOccur(arr,7,0,9)<<endl;
