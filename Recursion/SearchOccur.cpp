@@ -16,8 +16,8 @@ if(i==n)
 
 int lastOccur(int arr[],int n,int i,int key)
 {
-    int restArray=lastocc(arr,n,i+1,key);
-    if(resArray!=-1){
+    int restArray=lastOccur(arr,n,i+1,key);
+    if(restArray!=-1){
         return restArray;
     }
     if(arr[i]==key)
