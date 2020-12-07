@@ -11,19 +11,19 @@
 
 //   cin >> t;
 //   while (t--) {
-//     cin >> n >> k;
-//     int a[n];
-//     for (i = 0; i < n; i++) {
-//       if (k == 0 || k == n)
+//     cin >> n >> k; 
+//     int arr[n]; //making array to store elements
+//     while (n--) {
+//       if (k == 0 || k == n) 
 //         break;
 //       if (sum + 1 < i + 1 && k > 0) {
-//         a[i] = i;
+//         arr[i] = i;
 //         sum += i;
 //         k--;
 //         continue;
 //       }
 //       if (sum > i) {
-//         a[i] = -i;
+//         arr[i] = -i;
 //         sum += i;
 //         i++;
 //         if (sum > 0)
@@ -31,7 +31,7 @@
 //         continue;
 //       }
 //       if (sum + 1 > i + 1 && k == 1) {
-//         a[i] = -i;
+//         arr[i] = -i;
 //         i++;
 //         if (sum - i > 0)
 //           break;
@@ -41,7 +41,7 @@
 //         }
 //       }
 //       if (sum + i > i + 1 && k > 1) {
-//         a[i] = i;
+//         arr[i] = i;
 //         if (sum > 0)
 //           k--;
 //         sum += i;
@@ -49,12 +49,16 @@
 //       }
 //     }
 //     if (k == n) {
-//       fo(i, n) a[i] = i;
+//       for (i = 0; i < n; i++) {
+//         arr[i] = i;
+//       }
 //     } else if (i <= n) {
-//       fo(i, n) a[i] = -i;
+//       for (i = 0; i < n; i++)
+//         arr[i] = -i;
 //     }
-//     fo(i, n) cout << a[i] << " ";
-//     cout << endl;
 //   }
+//   for (i = 0; i < n; i++)
+//     cout << arr[i] << " ";
+//   cout << endl;
 //   return 0;
 // }
