@@ -1,0 +1,1 @@
+{"name":"Local: permutation","url":"d:\\codes\\Recursion\\permutation.cpp","tests":[{"id":1607431625234,"input":"","output":"ABC\nACB\nBAC\nBCA\nCAB\nCBA"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\Recursion\\permutation.cpp","group":"local","local":true}
