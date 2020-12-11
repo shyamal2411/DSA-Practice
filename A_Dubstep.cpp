@@ -21,8 +21,8 @@ cin.tie(0);
         }
         continue;
       } else {
-        count = 0;  //jo WUB na hoy to character print karavo ne again loop chalavo
-        cout << s[i];
+        count = 0; // set count again on 0 to not let print space before the first letter
+        cout << s[i];  // jo WUB na hoy to character print karavo ne again loop chalavo
       }//again check if there is WUB
     }
 return 0;
