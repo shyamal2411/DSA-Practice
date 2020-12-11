@@ -39,5 +39,26 @@ int main() {
   s2.insert(5);
   cout << "Answer of s2: " << s2.count(5) << "\n\n";  // 1
 
+  /*
+ //*MULTISET and unordered_multiset that otherwise work like set and
+ unordered_set but they can contain multiple instances of an element. For
+ example, in the following code all three instances of the number 5 are added to
+ a multiset:
+  */
+  cout << "MULTISET PART"
+       << "\n";
+  multiset<int> ms;
+  ms.insert(5);
+  ms.insert(5);
+  ms.insert(5);
+  cout << "Count: " << ms.count(5) << "\n";  // 3
+
+     ms.erase(5);
+     cout << "After Erase Count: " << ms.count(5) << "\n";  // 0
+
+  /*Sometimes when we want to remove only one duplicate element from the
+   * element, then below function is to used.*/
+  ms.erase(ms.find(5));
+  cout << "Erasing particular element: " << ms.count(5) << "\n";  // 2
   return 0;
 }
