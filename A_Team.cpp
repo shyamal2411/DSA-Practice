@@ -1,0 +1,21 @@
+#include<bits/stdc++.h> 
+using namespace std;
+
+#define ll long long
+#define fo(i,n) for(int i=0;i<n;i++)
+//codeforces 231 A
+int main(){
+ios::sync_with_stdio(0);
+cin.tie(0);
+    ll int n,k,t,i,p,q,r,s,count=0,j;
+    cin>>n;
+    while(n--)
+    {
+        int a,b,c;
+        cin>>a>>b>>c;
+        if(a+b+c>=2)
+        count++;
+    }
+    cout<<count<<endl;
+return 0;
+}
