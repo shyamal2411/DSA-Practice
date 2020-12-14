@@ -22,9 +22,9 @@ struct Linkedlist {
     node* current = head;
     node *prev = NULL, *next = NULL;
     while (current != NULL) {
-      next = current->next;
-      current->next = prev;
-      prev = current;
+      next = current->next;//shift next to next node.
+      current->next = prev;//now bring that next pointer to the previous node to making it follow reverse order list.
+      prev = current;// make it current
       current = next;
     }//while loop
     head = prev;
