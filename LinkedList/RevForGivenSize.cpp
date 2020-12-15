@@ -1,9 +1,13 @@
-// CPP program to reverse a linked list
-// in groups of given size
+// CPP program to reverse a linked list in groups of given size
+//!  REFER THIS VIDEO FOR EXPLANATION:
+//!  https://www.youtube.com/watch?v=Of0HPkk3JgI and video of GFG
 #include <bits/stdc++.h>
 using namespace std;
 
-/* Link list node */
+/*
+SPACE COMPLEXITY: O(1) because we're using only one dummy node
+TIME COMPLEXITY: O(n).
+*/
 class Node {
  public:
   int data;
@@ -14,18 +18,21 @@ class Node {
 of size k and returns the pointer
 to the new head node. */
 Node* reverse(Node* head, int k) {
-  Node* current = head;  //to let it start the loop 
+  Node* current = head;  // to let it start the loop
   Node* next = NULL;
   Node* prev = NULL;
   int count = 0;
 
   /*reverse first k nodes of the linked list */
   while (current != NULL && count < k) {
-    next = current->next;
+    next = current->next;  // HERE WE GAVE COUNT<K IN WHILE LOOP
+    // BECAUSE WE WILL BE CHANGES LINKS 2 TIMES FOR 3 ELEMENTS SO K-1 I.E.
+    // COUNT<K AND NOT COUNT<=K
     current->next = prev;
-    //this means that the node is added to the linkedlist in reversed order
-    // the node which was next-became prev and this current node is not pointing towards that previous node
-    // here, 7 is next of 6, but in reversed ll, current->next=prev i.e. =6.
+    // this means that the node is added to the linkedlist in reversed order
+    // the node which was next-became prev and this current node is not pointing
+    // towards that previous node here, 7 is next of 6, but in reversed ll,
+    // current->next=prev i.e. =6.
     prev = current;
     current = next;
     count++;
@@ -41,20 +48,18 @@ Node* reverse(Node* head, int k) {
   return prev;
 }
 
-/* UTILITY FUNCTIONS */
-/* Function to push a node */
-void push(Node** head_ref, int new_data) {
+void push(Node** t, int new_data) {
   /* allocate node */
-  Node* new_node = new Node();
+  Node* newNode = new Node();
 
   /* put in the data */
-  new_node->data = new_data;
+  newNode->data = new_data;
 
   /* link the old list off the new node */
-  new_node->next = (*head_ref);
+  newNode->next = (*t);
 
   /* move the head to point to the new node */
-  (*head_ref) = new_node;
+  (*t) = newNode;
 }
 
 /* Function to print linked list */
@@ -65,12 +70,9 @@ void printList(Node* node) {
   }
 }
 
-/* Driver code*/
 int main() {
-  /* Start with the empty list */
   Node* head = NULL;
 
-  /* Created Linked list is 1->2->3->4->5->6->7->8->9 */
   push(&head, 9);
   push(&head, 8);
   push(&head, 7);
@@ -80,10 +82,11 @@ int main() {
   push(&head, 3);
   push(&head, 2);
   push(&head, 1);
+  /* Created Linked list is 1->2->3->4->5->6->7->8->9 */
 
   cout << "Given linked list \n";
   printList(head);
-  head = reverse(head, 3);
+  head = reverse(head, 5);
 
   cout << "\nReversed Linked list \n";
   printList(head);
