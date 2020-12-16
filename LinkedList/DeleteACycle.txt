@@ -1,0 +1,19 @@
+public class solution{
+    public boolean hascycle(ListNode head)
+    {
+        if(head==NULL || head->next==NULL)
+        return false;
+        ListNode *fast=head;
+        ListNode *slow=head;
+
+        while(fast->next && fast->next->next) //keep on iterating until fast doesn't reach NULL.
+        {
+            fast=fast->next->next;
+            slow=slow->next;
+            if(fast==slow)//at any point you see that fast and slow are on the same node, then there's a loop.
+            return true;
+        }
+        //if the whole while got executed & if the if statement didnot return true then we can say that there was no loop in the linkedlist.
+        return false;
+    }
+};
