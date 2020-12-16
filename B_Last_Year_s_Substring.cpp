@@ -24,7 +24,6 @@ int main() {
   }
   return 0;
 }
-
 /*Explanation: The question asks that the solution should only contain 2020 in the result,
 anything except 2020 should be removed. now in the solution, we take that substr of s,
  i.e substr(0,i) should be removed from front and substr(n-4+i,4-i)  -4+i because we don't have to remomve 2020.*/
