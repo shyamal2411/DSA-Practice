@@ -12,8 +12,9 @@ void deletemid(stack<char>& st, int n, int curr = 0)  // curr is current number.
   int x = st.top();
   st.pop();
   deletemid(st, n, curr + 1);
-
-  if (curr != n / 2)
+/*uptil here, we were popping elements from the stack,
+ now we're pushing elements except the n/2th element*/
+  if (curr !=floor(n / 2)+1)
     st.push(x);
 }
 
@@ -25,9 +26,9 @@ int main() {
   st.push('4');
   st.push('5');
   st.push('6');
-  st.push('7');
-  st.push('8');
-  deletemid(st, st.size());
+  // st.push('7');
+  // st.push('8');
+    deletemid(st, st.size());
   while (!st.empty()) {
     char p = st.top();
     st.pop();
