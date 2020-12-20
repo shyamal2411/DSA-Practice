@@ -40,13 +40,37 @@ void display(node* head) {
 }
 
 bool search(node* head, int key) {
-  node* t = heaed;
+  node* t = head;
   while (t != nullptr) {
     if (t->data == key)
       return true;
     t = t->next;
   }
   return false;
+}
+void deletehead(node*& head) {
+  node* todelete = head;
+  head = head->next;
+
+  free(todelete);
+}
+void deletenode(node*& head, int val) {
+    if(head==nullptr)
+    return;
+
+    if(head->next==NULL)
+    {
+        deletehead(head);
+        return;
+    }
+
+  node* t = head;
+  while (t->next->data != val) {
+    t = t->next;
+  }
+  node* to_del = t->next;
+  t->next = t->next->next;
+  free(to_del);
 }
 int main() {
   ios::sync_with_stdio(0);
@@ -63,5 +87,7 @@ int main() {
   inserthead(head, 8);
   display(head);
   cout << search(head, 5);
+  deletenode(head, 3);
+  deletehead(head);
   return 0;
 }
