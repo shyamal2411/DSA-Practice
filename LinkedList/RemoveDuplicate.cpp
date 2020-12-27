@@ -28,7 +28,7 @@ void removeDuplicates(Node* head) {
       next_next = current->next->next;
       free(current->next);
       current->next = next_next;
-    } else  //! Only advance if no deletion */
+     } else  //! Only advance if no deletion */
     {
       current = current->next;
     }
