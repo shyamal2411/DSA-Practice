@@ -3,6 +3,7 @@ using namespace std;
 
 #define ll long long
 #define fo(i, n) for (int i = 0; i < n; i++)
+// ACCEPTED SOLUTION
 
 int main() {
   ios::sync_with_stdio(0);
@@ -10,31 +11,20 @@ int main() {
   ll int n, k, t, i, p, q, r, s, count = 0, j;
   cin >> t;
   while (t--) {
-    string str;
-    cin >> str;
+    string s;
+    cin >> s;
+    s.resize(s.length());
+    ll i, count = 0, flag = 0;
 
-    if (str.size() % 2) {
-      cout << "NO" << endl;
-    } else {
-      if (str[0] == ')') {
-        cout << "NO" << endl;
-        break;
-      } else if (str[str.size() - 1] == '(') {
-        cout << "NO" << endl;
-        break;
-      } else {
-        fo(i, str.size()) {
-          if (i % 2 == 0 && str[i] == ')') {
-            cout << "NO" << endl;
-            break;
-          } else if (i % 2 != 0 && str[i] == '(') {
-            cout << "NO" << endl;
-            break;
-          }
-        }
-      }
-      cout << "YES" << endl;
-    }
+    if (s.length() % 2)
+      cout << "NO"
+           << "\n";
+    else if (s[0] == ')' || s[s.length() - 1] == '(')
+      cout << "NO"
+           << "\n";
+    else
+      cout << "YES"
+           << "\n";
   }
   return 0;
 }
