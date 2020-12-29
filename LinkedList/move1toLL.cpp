@@ -10,10 +10,10 @@ class Node {
 
 /*new node with given data */
 Node* newNode(int data) {
-  Node* new_node = new Node;
-  new_node->data = data;
-  new_node->next = NULL;
-  return new_node;
+  Node* newNode = new Node;
+  newNode->data = data;
+  newNode->next = NULL;
+  return newNode;
 }
 
 Node* reverse(Node* head) {
@@ -60,20 +60,13 @@ Node* addOneUtil(Node* head) {
   return res;  // return head of the resultant list
 }
 
-// This function mainly uses addOneUtil().
+// uses addOneUtil().
 Node* addOne(Node* head) {
-  // Reverse linked list
-  head = reverse(head);
-
-  // Add one from left to right of reversed
-  // list
-  head = addOneUtil(head);
-
-  // Reverse the modified list
-  return reverse(head);
+  head = reverse(head);     // Reverse linked list
+  head = addOneUtil(head);  // Add one from left to right of reversed list
+  return reverse(head);     // Reverse the modified list
 }
 
-// A utility function to print a linked list
 void printList(Node* node) {
   while (node != NULL) {
     cout << node->data;
@@ -82,7 +75,6 @@ void printList(Node* node) {
   cout << endl;
 }
 
-/* Driver program to test above function */
 int main(void) {
   Node* head = newNode(1);
   head->next = newNode(9);
@@ -99,5 +91,3 @@ int main(void) {
 
   return 0;
 }
-
-// This is code is contributed by rathbhupendra
