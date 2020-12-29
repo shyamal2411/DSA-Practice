@@ -7,10 +7,6 @@ using namespace std;
 /*This program is fully working, output may not come due to sublime,otherwise its fully functioning.*/
 int main()
 {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 	int n, i, p, q, count = 0, j, t, temp;
 
 	cin >> n;
