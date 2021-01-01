@@ -1,0 +1,1 @@
+{"name":"Local: chef_and_division","url":"d:\\codes\\chef_and_division.cpp","tests":[{"id":1609504543103,"input":"5\n1 5 31\n4\n1 10 3\n23\n2 5 7\n20 36\n2 5 10\n19 2\n3 3 300\n1 1 1","output":"0\n2\n7\n4\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\chef_and_division.cpp","group":"local","local":true}
