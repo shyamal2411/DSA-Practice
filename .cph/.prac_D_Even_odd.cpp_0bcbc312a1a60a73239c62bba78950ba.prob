@@ -1,0 +1,1 @@
+{"name":"Local: prac_D_Even_odd","url":"d:\\codes\\prac_D_Even_odd.cpp","tests":[{"id":1609849700309,"input":"4\n4\n5 2 7 3\n3\n3 2 1\n4\n2 2 2 2\n2\n7 8","output":"Bob\nTie\nAlice\nAlice"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\prac_D_Even_odd.cpp","group":"local","local":true}
