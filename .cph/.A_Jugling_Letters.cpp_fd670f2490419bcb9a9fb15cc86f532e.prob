@@ -1,0 +1,1 @@
+{"name":"Local: A_Jugling_Letters","url":"d:\\codes\\A_Jugling_Letters.cpp","tests":[{"id":1610731842209,"input":"4\n2\ncaa\ncbb\n3\ncba\ncba\ncbb\n4\nccab\ncbac\nbca\nacbcc\n4\nacb\ncaf\nc\ncbafc\n","output":"YES\nNO\nYES\nNO\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\A_Jugling_Letters.cpp","group":"local","local":true}
