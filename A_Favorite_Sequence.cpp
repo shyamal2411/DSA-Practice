@@ -23,7 +23,7 @@ int main() {
       else
         cout << arr[n - i - 1] << " ";
     }
-    cout << endl;
+    cout << "\n";
   }
   return 0;
 }*/
