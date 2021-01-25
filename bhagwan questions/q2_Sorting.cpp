@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int magicIndex(int* arr, int start, int end) {
+int magicIndex(int arr[], int start, int end) {
   // If No Index return -1, stated in the statement itself.
   if (start > end)
     return -1;
