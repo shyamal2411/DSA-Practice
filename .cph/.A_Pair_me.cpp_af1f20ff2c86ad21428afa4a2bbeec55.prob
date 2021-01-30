@@ -1,0 +1,1 @@
+{"name":"Local: A_Pair_me","url":"d:\\codes\\A_Pair_me.cpp","tests":[{"id":1612026713398,"input":"5\n1 1 2\n1 3 2\n2 2 2\n100 100 201\n11 22 33","output":"YES\nYES\nNO\nNO\nYES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\A_Pair_me.cpp","group":"local","local":true}

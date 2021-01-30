@@ -1,0 +1,1 @@
+{"name":"Local: B_Even_Differences","url":"d:\\codes\\B_Even_Differences.cpp","tests":[{"id":1612027628168,"input":"2\n2\n2 4\n3\n4 1 2","output":"0\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\B_Even_Differences.cpp","group":"local","local":true}
