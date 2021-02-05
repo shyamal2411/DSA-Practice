@@ -1,0 +1,1 @@
+{"name":"Local: Highest_Divisor","url":"d:\\codes\\Highest_Divisor.cpp","tests":[{"id":1612526222940,"input":"24","output":"8"},{"id":1612526230968,"input":"91","output":"7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\Highest_Divisor.cpp","group":"local","local":true}
