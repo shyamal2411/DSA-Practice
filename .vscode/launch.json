@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch inheritance",
+            "request": "launch",
+            "mainClass": "Java_Lab.inheritance",
+            "projectName": "codes_e9d42d4d"
+        },
+        {
+            "type": "java",
             "name": "Launch Mysort",
             "request": "launch",
             "mainClass": "Mysort",
