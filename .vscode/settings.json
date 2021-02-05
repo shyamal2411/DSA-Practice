@@ -6,7 +6,8 @@
         "initializer_list": "cpp",
         "regex": "cpp",
         "utility": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "ostream": "cpp"
     },
     "C_Cpp.dimInactiveRegions": false,
     "better-comments.highlightPlainText": true,
