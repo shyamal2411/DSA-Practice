@@ -1,14 +1,22 @@
 class Solution {
  public:
   int minOperations(string s) {
-    int countzero = 0, countone = 0;
+    int x = 0, y = 0;
     for (int i = 0; i < s.size(); i++) {
-      if (s[i] == '1')
-        countone++;
+    
+        if(i%2==0 && s[i]=='1')
+        {x++;}
 
-      if (s[i] == '0')
-        countzero++;
-    }
-    return abs(countzero - countone);
+        else if (i%2==1 && s[i]=='0')
+        {x++;}
+
+        if(i%2==0 && s[i]=='0')
+        {y++;}
+
+        else if (i%2==0 && s[i]=='1')
+        {y++;}
+  }
+
+  return min(x,y);
   }
 };
