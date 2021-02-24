@@ -1,0 +1,1 @@
+{"name":"Local: Body_Mass_Index","url":"d:\\codes\\leetcode_prac\\Body_Mass_Index.cpp","tests":[{"id":1614182768052,"input":"3\n72 2\n80 2\n120 2","output":"1\n2\n4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\leetcode_prac\\Body_Mass_Index.cpp","group":"local","local":true}
