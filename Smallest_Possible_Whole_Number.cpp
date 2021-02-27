@@ -12,13 +12,7 @@ int main() {
   cin >> t;
   while (t--) {
     cin >> n >> k;
-    // while (n >= 0) {
-    //   n = n - k;
-    // }
-    n= n-(n/k *k);
-
-    cout << n << endl;
-
+    cout << n-(n/k)*k<< endl;
   }
 
   return 0;
