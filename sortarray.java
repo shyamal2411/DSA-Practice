@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class sortarray {
     
     void sort(int arr[]) {
