@@ -80,7 +80,7 @@ int isfull(struct stack st)
 	return st.top = st.size - 1;
 }
 int main()
-// {
+{
 // #ifndef ONLINE_JUDGE
 // 	freopen("input.txt", "r", stdin);
 // 	freopen("output.txt", "w", stdout);
@@ -95,5 +95,4 @@ void push(&st, 40);
 void push(&st, 50);
 display(st);
 printf("Peeked value is: %d\n", peek(st, 1));
-
 }
