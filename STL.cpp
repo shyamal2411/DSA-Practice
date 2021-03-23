@@ -1,9 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 bool f(int x, int y) {
   return x > y;
 }
-int main() {
+
+void vectorFunction() {
   // Vector is nothing but an array or list
   vector<int> A = {1, 2, 3, 4};
 
@@ -24,6 +26,9 @@ int main() {
   A.push_back(100);
   A.push_back(100);
   A.push_back(123);
+  for (int x : A) {
+    cout << x << " ";
+  }  // to print the elements of vector
   // 2,3,11,14,100,100,100,100,100,123
 
   //   vector<int>::iterator it = lower_bound(A.begin(), A.end(), 100);  // >=
@@ -67,4 +72,37 @@ int main() {
   WE'RE FIRT SORTING AND THENN ONLY PERFORM FUNCTIONS LIEK UPPER BOUND AND
   LOWERBOUND
   */
+}
+
+void setFunction() {
+  set<int> s;
+  s.insert(1);
+  s.insert(2);
+  s.insert(-10);
+  s.insert(3);
+  s.insert(-4);
+
+  for (int y : s) {
+    cout << y << " ";
+  }
+  cout << endl;
+
+  /*Set constatntly arranges the elements in ascending manner
+  while inserting, refer the above example for the same.*/
+  /*input time is Logn time, this is where set beats vector, as vector
+  disturbs the whole array while set arranges the array, time taken by vector is
+  O(n), that of set is logn*/
+
+  auto it = s.find(-1);
+  if (it == s.end()) {
+    cout << "not present\n";
+  } else {
+    cout << "present\n";
+    cout << *it << endl;
+  }
+}
+
+int main() {
+  //  vectorFunction();
+  setFunction();
 }
