@@ -1,13 +1,12 @@
-#include<iostream>
-
-
+#include <bits/stdc++.h>
+#include <fstream>
 using namespace std;
 
-int main()
-{
-    int a,b,c;
-    a=9;
-    b=8;
-    c=a+b;
-    cout<<c;
+int main() {
+  ifstream in("input.txt");
+  ofstream out("output.txt");
+  int a, b;
+  in >> a >> b;
+  out << a + b << "\n";
+  return 0;
 }
