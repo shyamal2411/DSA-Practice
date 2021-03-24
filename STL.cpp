@@ -111,7 +111,25 @@ void setFunction() {
   }
 }
 
+void mapFunction() {
+  map<int, int> a;
+  a[1] = 100;
+  a[2] = -2;
+  a[3] = 200;
+
+  map<char, int> cnt;
+  string x = "Shyamal Prajapati";
+
+  for (char c : x) {
+    cnt[c]++;
+  }
+  cout << cnt['a'] << " " << cnt['y'] << endl;
+  /*the above function just showed me the occurences of letter asked in string*/
+  // Takes O(logN) time
+}
+
 int main() {
   //  vectorFunction();
-  setFunction();
+  // setFunction();
+  mapFunction();
 }
