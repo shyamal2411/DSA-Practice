@@ -100,6 +100,15 @@ void setFunction() {
     cout << "present\n";
     cout << *it << endl;
   }
+
+  auto it2 = s.lower_bound(-1);  // since set is always sorted we don't write
+                                 // A.begin and A.end unlike vectors.
+  auto it3 = s.upper_bound(2);
+  cout << *it2 << " " << *it3 << endl;
+  auto it4 = s.upper_bound(1);
+  if (it4 == s.end()) {
+    cout << "Not found!" << endl;
+  }
 }
 
 int main() {
