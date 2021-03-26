@@ -1,3 +1,5 @@
+package Java_Lab;
+
 class isPrime {
 
     boolean flag;
