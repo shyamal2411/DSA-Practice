@@ -90,7 +90,8 @@ void explainVector() {
   vector<int> v(2, 100);           // {100, 100}
   v.insert(v.begin(), 300);        // {300, 100, 100};
   v.insert(v.begin() + 1, 2, 10);  // {300, 10, 10, 100, 100}
-
+  // above function says that insert at position begin+1, then how many elements
+  // we want insert i.e. 2, then finally the elements to be inserted
   vector<int> copy(2, 50);  // {50, 50}
   v.insert(v.begin(), copy.begin(),
            copy.end());  // {50, 50, 300, 10, 10, 100, 100}
