@@ -2,8 +2,8 @@ package Java_Lab;
 
 class Animals {
 
-    // field and method of the parent class
     String names;
+    // field and method of the parent class
 
     public void eat() {
         System.out.println("I can eat");
@@ -11,7 +11,7 @@ class Animals {
 }
 
 // inherit from Animal
-class Dogs extends Animal {
+class Dogs extends Animals {
 
     // new method in subclass
     public void display() {
@@ -19,19 +19,19 @@ class Dogs extends Animal {
     }
 }
 
-public class animal_inherit{
+public class animal_inherit {
     public static void main(String[] args) {
 
-    // create an object of the subclass
-    Dog labrador = new Dog();
+        // create an object of the subclass
+        Dogs labrador = new Dogs();
 
-    // access field of superclass
-    labrador.names = "Rohu";
-    labrador.display();
+        // access field of superclass
+        labrador.names = "Rohu";
+        labrador.display();
 
-    // call method of superclass
-    // using object of subclass
-    labrador.eat();
+        // call method of superclass
+        // using object of subclass
+        labrador.eat();
 
-  }
+    }
 }
