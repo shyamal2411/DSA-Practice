@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <string>
 using namespace std;
-
+// Self explanation at the end of the code
 #define int long long
 #define f(i, a, n) for (int i = a; i < n; i++)
 #define rf(i, a, n) for (int i = n - 1; i >= a; i--)
@@ -46,3 +46,12 @@ int32_t main() {
     solve();
   }
 }
+
+/*
+As in the problem, there is n & k, k refers 4 2 1 1 for example, so there is
+field with 2,3 which chef can work on now in problem, we take n, k store the
+elements in set, why? because set stores only unique elements in it, repetition
+is not allowed, so numbers will be unique Then we compare the size of that set
+with given K, in example 4 2 1 1, set will only cotain- 1 2 4, there's room for
+3, hence we print Yes
+*/
