@@ -50,3 +50,8 @@ int32_t main() {
     solve();
   }
 }
+
+/*
+  My error was,I didn't take sqrt in first attempt,
+  also take help of these multiple integers to handle summing up roots & squares
+*/
