@@ -12,15 +12,27 @@ using namespace std;
 #define out cout<<
 
 void solve(){
-int n,k,t,p,q,r,count=0,j,flag;
+int n,k,t,p,q,r,count=0,j;
 
 cin>>n;
-int a[n];
-for(int i=0;i<n;i++)
-cin>>a[i];
 
-sort(a,a+n);
-cout<<a[0]+a[1]<<endl;
+set<int> s;
+f(i, 0, n) {
+  int x;
+  cin >> x;
+  s.insert(x);
+}
+
+int flag = 0;
+int sum = 0;
+for (auto itr : s) {
+  if (flag == 2) {
+    break;
+  }
+  sum += itr;
+  flag++;
+}
+cout << sum << " ";
 }
 
 
