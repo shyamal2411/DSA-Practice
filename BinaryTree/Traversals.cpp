@@ -3,18 +3,18 @@ using namespace std;
 
 // PREORDER, INORDER, POSTORDER TRAVERSALS IN BINARY TREE.
 
-struct node {
+struct Node {
   int data;
-  struct node* left;
-  struct node* right;
+  struct Node* left;
+  struct Node* right;
 
-  node(int val) {
+  Node(int val) {
     data = val;
     right = left = NULL;
   }
 };
 
-void preorder(struct node* root) {
+void preorder(struct Node* root) {
   if (root == NULL)
     return;  // base case
 
@@ -23,7 +23,7 @@ void preorder(struct node* root) {
   preorder(root->right);
 }
 
-void inorder(struct node* root) {
+void inorder(struct Node* root) {
   if (root == NULL)
     return;  // base case
 
@@ -32,7 +32,7 @@ void inorder(struct node* root) {
   inorder(root->right);
 }
 
-void postorder(struct node* root) {
+void postorder(struct Node* root) {
   if (root == NULL)
     return;  // base condition
 
@@ -41,17 +41,47 @@ void postorder(struct node* root) {
   cout << root->data << " ";
 }
 
+int search(int inorder[], int start, int end, int current) {
+  for (int i = start; i < end; i++) {
+    if (inorder[i] == current) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+// Creating Tree
+Node* buildTree(int preorder[], int inorder[], int start, int end) {
+  static int index = 0;
+  if (start > end) {
+    return NULL;
+  }
+  int current = preorder[index];
+  index++;
+  Node* node = Node(current);
+  if (start == end) {
+    return node;
+  }
+  int position = search(inorder, start, end, current);
+  node->left = buildTree(preorder, inorder, start, position - 1);
+  node->right = buildTree(preorder, inorder, position - 1, end);
+  return;
+}
+
 int main() {
-  struct node* root = new node(1);
-  root->left = new node(2);
-  root->right = new node(3);
-  root->left->left = new node(4);
-  root->left->right = new node(5);
-  root->right->left = new node(6);
-  root->right->right = new node(7);
+  int preorder[] = {1, 2, 3, 4, 5};
+  int inorder[] = {4, 2, 1, 5, 3};
+  Node* root = buildTree(preorder, inorder, 0, 4);
+  // struct Node* root = new Node(1);
+  // root->left = new Node(2);
+  // root->right = new Node(3);
+  // root->left->left = new Node(4);
+  // root->left->right = new Node(5);
+  // root->right->left = new Node(6);
+  // root->right->right = new Node(7);
 
   // preorder(root);
-  // inorder(root);
-  postorder(root);
+  inorder(root);
+  // postorder(root);
   return 0;
 }
