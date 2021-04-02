@@ -4,10 +4,7 @@
 using namespace std;
 
 #define int long long 
-<<<<<<< HEAD
 #define nl endl
-=======
->>>>>>> fd7430143eb137f342cd1954027f74311e25daf4
 #define f(i,a,n) for(int i=a;i<n;i++)
 #define rf(i,a,n) for(int i=n-1;i>=a;i--)
 #define read(arr,n) for(int i=0;i<n;i++)cin>>arr[i];
@@ -15,27 +12,21 @@ using namespace std;
 #define in cin>>
 #define out cout<<
 
-void solve(){
-<<<<<<< HEAD
-int a,n,k,t,i,p,q,r,s,count=0,j,flag;
-in a;
-while (a >= 10) {
-  s = 0;
-  r = a;
-  while (r) {
-    s += (r % 10);
-    r /= 10;
+void solve() {
+  int n, k, t, i, p, q, r, count = 0, j, flag, a, b, c;
+  string s;
+  in s;
+  f(i, 2, s.size()) {
+    a = s[i - 1] - 'A';
+    b = s[i - 2] - 'A';
+    c = s[i] - 'A';
+    if ((a + b) % 26 != c) {
+      out "NO" << nl;
+      return;
+    }
   }
-  a = s;
+  out "YES" << nl;
 }
-out a << nl;
-=======
-int n,k,t,i,p,q,r,s,count=0,j,flag;
-  cin>>n;
-  cout<<sqrt(n)<<endl;
->>>>>>> fd7430143eb137f342cd1954027f74311e25daf4
-}
-
 
 int32_t main(){
     ios_base::sync_with_stdio(false);cin.tie(NULL);

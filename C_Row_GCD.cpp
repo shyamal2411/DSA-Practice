@@ -4,10 +4,6 @@
 using namespace std;
 
 #define int long long 
-<<<<<<< HEAD
-#define nl endl
-=======
->>>>>>> fd7430143eb137f342cd1954027f74311e25daf4
 #define f(i,a,n) for(int i=a;i<n;i++)
 #define rf(i,a,n) for(int i=n-1;i>=a;i--)
 #define read(arr,n) for(int i=0;i<n;i++)cin>>arr[i];
@@ -15,27 +11,33 @@ using namespace std;
 #define in cin>>
 #define out cout<<
 
-void solve(){
-<<<<<<< HEAD
-int a,n,k,t,i,p,q,r,s,count=0,j,flag;
-in a;
-while (a >= 10) {
-  s = 0;
-  r = a;
-  while (r) {
-    s += (r % 10);
-    r /= 10;
+int gcd(int a, int b) {
+  if (b == 0) {
+    return a;
+  } else {
+    return gcd(b, a % b);
   }
-  a = s;
-}
-out a << nl;
-=======
-int n,k,t,i,p,q,r,s,count=0,j,flag;
-  cin>>n;
-  cout<<sqrt(n)<<endl;
->>>>>>> fd7430143eb137f342cd1954027f74311e25daf4
 }
 
+void solve(){
+int n,m,k,t,i,p,q,r,s,count=0,j,flag;
+cin >> n >> m;
+
+vector<int> a(n), b(m);
+
+read(a, n);
+read(b, m);
+
+sort(a.begin(), a.end());
+
+int final_gcd = 0;
+f(i, 1, n) { final_gcd = gcd(final_gcd, a[i] - a[0]); }
+
+f(i, 0, m) {
+  int ans = gcd(final_gcd, a[0] + b[i]);
+  cout << ans << " ";
+}
+}
 
 int32_t main(){
     ios_base::sync_with_stdio(false);cin.tie(NULL);
@@ -44,7 +46,7 @@ int32_t main(){
     
     int t;
     t=1;
-    //in t;
+    in t;
     while(t--){
         solve();  
     }    
