@@ -1,1 +1,0 @@
-{"name":"Local: B_Fair_Division","url":"d:\\codes\\B_Fair_Division.cpp","tests":[{"id":1609774347081,"input":"5\n2\n1 1\n2\n1 2\n4\n1 2 1 2\n3\n2 2 2\n3\n2 1 2","output":"YES\nNO\nYES\nNO\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\B_Fair_Division.cpp","group":"local","local":true}

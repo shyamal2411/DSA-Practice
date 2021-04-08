@@ -1,1 +1,0 @@
-{"name":"Local: codechef_long_Jan","url":"d:\\codes\\codechef_long_Jan.cpp","tests":[{"id":1610003845555,"input":"3\n4\n0000\n8\n00001111\n4\n1001","output":"a\nap\nj"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\codechef_long_Jan.cpp","group":"local","local":true}
