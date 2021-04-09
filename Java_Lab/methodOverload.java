@@ -1,4 +1,3 @@
-package Java_Lab;
 
 class methodOverload{
     private static void display(int a)
