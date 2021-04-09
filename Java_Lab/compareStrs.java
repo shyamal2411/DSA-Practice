@@ -1,4 +1,4 @@
-package Java_Lab;
+
 
 public class compareStrs {
    public static void main(String[] args) {

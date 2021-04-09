@@ -1,4 +1,4 @@
-package Java_Lab;
+
 import java.util.Scanner;
 
 public class Fibonacci {

@@ -1,4 +1,3 @@
-package Java_Lab;
 
 class Doctor {
     void DoctorDetails() {

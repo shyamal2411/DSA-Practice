@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch methodOverload",
+            "request": "launch",
+            "mainClass": "methodOverload",
+            "projectName": "CPP-Codes_bd63fce3"
+        },
+        {
+            "type": "java",
             "name": "Launch inheritance",
             "request": "launch",
             "mainClass": "Java_Lab.inheritance",

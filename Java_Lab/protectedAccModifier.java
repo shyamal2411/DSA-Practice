@@ -1,4 +1,4 @@
-package Java_Lab;
+
 
 class Java{
     protected void display()

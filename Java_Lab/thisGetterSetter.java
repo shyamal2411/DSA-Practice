@@ -1,4 +1,4 @@
-package Java_Lab;
+
 
 public class thisGetterSetter {
     String name;
