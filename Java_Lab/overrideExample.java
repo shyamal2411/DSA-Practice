@@ -1,7 +1,7 @@
 
 /*----SHYAMAL----*/
 
-package Java_Lab;
+
 
 class Figures {
     double shapearea; // area can be of decimal value too!

@@ -1,4 +1,4 @@
-package Java_Lab;
+
 /*
 1. It is required to compute SPI (semester performance index) of n students of a class for their registered subjects in a semester.
 Assume that all students register for 6 subjects and each subject carry 5 credits. Also, follow GTU convention and method for computation
