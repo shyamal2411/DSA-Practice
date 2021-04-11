@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch consOverload",
+            "request": "launch",
+            "mainClass": "consOverload",
+            "projectName": "CPP-Codes_bd63fce3"
+        },
+        {
+            "type": "java",
             "name": "Launch methodOverload",
             "request": "launch",
             "mainClass": "methodOverload",
