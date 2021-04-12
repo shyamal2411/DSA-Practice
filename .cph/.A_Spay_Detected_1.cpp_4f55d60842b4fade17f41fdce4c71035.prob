@@ -1,1 +1,0 @@
-{"name":"Local: A_Spay_Detected_1","url":"d:\\CPP-Codes\\A_Spay_Detected_1.cpp","tests":[{"id":1618077568934,"input":"4\n4\n11 13 11 11\n5\n1 4 4 4 4\n10\n3 3 3 3 10 3 3 3 3 3\n3\n20 20 10","output":"2\n1\n5\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CPP-Codes\\A_Spay_Detected_1.cpp","group":"local","local":true}

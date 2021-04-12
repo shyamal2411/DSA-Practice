@@ -1,1 +1,0 @@
-{"name":"Local: newww","url":"d:\\CPP-Codes\\newww.cpp","tests":[{"id":1618068953316,"input":"4\n4\n11 13 11 11\n5\n1 4 4 4 4\n10\n3 3 3 3 10 3 3 3 3 3\n3\n20 20 10","output":"2\n1\n5\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CPP-Codes\\newww.cpp","group":"local","local":true}
