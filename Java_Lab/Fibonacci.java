@@ -7,8 +7,8 @@ public class Fibonacci {
         int n, first = 0, next = 1;
 
         System.out.println("Enter number");
-        Scanner scanner = new Scanner(System.in);
-        n = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
+       n = sc.nextInt();
         System.out.print( " Fibonacci numbers are: ");
         System.out.print(first + " " + next);
         for (int i = 1; i <= n - 2; ++i) {
