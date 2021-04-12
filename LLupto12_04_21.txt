@@ -1,0 +1,15 @@
+1.reverse doubly
+2.check if ll is palindrome
+3.split circular ll in 2 halves
+4.check if ll is circular or not
+5.find middle node of ll
+6.remove node in ll
+7.remove duplicates from sorted ll
+8.delete starting point of loop in ll
+9.detect cycle in ll
+10.reverse ll k times
+11.cycle II
+12.cycle l
+13.intersect 2 ll with no cycle
+14.delete node in ll
+15.bits to int in LL
