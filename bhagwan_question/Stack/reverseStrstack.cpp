@@ -1,43 +1,46 @@
 #include <bits/stdc++.h>
+#include <stack>
 using namespace std;
-#define MAX 1000
+#define MAX 20
 
-int top=-1;
-char stack[MAX];
+//!1st Approach
+// int top = -1;
+// char stack[MAX];
 
-char push(char item) {
-    if(top ==MAX-1)
-    cout<<"Stack overflow"<<endl;
-    else
-    stack[top++] = item;
-}
+// /*Begin of push*/
+// char push(char item) {
+//   if (top == (MAX - 1))
+//     printf("Stack Overflow\n");
+//   else
+//     stack[++top] = item;
+// }
+// /*End of push*/
 
-char pop()
-{
-    if(top ==-1)
-    cout<<"Stack empty"<<end;
-    else
-    return stack[top--];
-}
+// /*Begin of pop*/
+// char pop() {
+//   if (top == -1)
+//     printf("Stack Underflow\n");
+//   else
+//     return stack[top--];
+// }
+// /*End of pop*/
 
-int main()
-{
-    char str[20];
-    int i;
-    cout<<"Enter String"<<endl;
-    cin>>str;
-    int n = str.length();
-    for (i = 0; i < n; i++)
-      push(str[i]);
-    for (i = 0; i < n; i++)
-      str[i] = pop();
-    cout << "Reversed string is : " << endl;
-    
-}
-
-
+// /*Begin of main*/
+// main() {
+//   char str[20];
+//   int i;
+//   printf("Enter the string : ");
+//   gets(str);
+//   for (i = 0; i < str.length(); i++)
+//     push(str[i]);
+//   for (i = 0; i < str.length(); i++)
+//     str[i] = pop();
+  
+//   puts(str);
+// }
+//! 2nd approach
 // void reverse(string& str) {
-//    stack<int> s;
+//    stk<int> s;
 
 //   for (char ch : str) {
 //     s.push(ch);
