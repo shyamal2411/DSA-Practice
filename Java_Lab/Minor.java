@@ -1,4 +1,3 @@
-package Java_Lab;
 
 class Uber {
     static int y = 2;

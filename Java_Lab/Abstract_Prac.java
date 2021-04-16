@@ -1,4 +1,3 @@
-package Java_Lab;
 
 abstract class Abstract_Prac {
 
