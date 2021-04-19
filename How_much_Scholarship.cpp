@@ -45,6 +45,3 @@ int32_t main() {
     solve();
   }
 }
-
-// https://www.codechef.com/problems/TRISQ/
-// https://www.codechef.com/problems/school/?sort_by=Accuracy&sorting_order=desc
