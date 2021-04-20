@@ -23,7 +23,7 @@ void solve() {
   int n, k, i, p, q, r, count = 0, j, flag, ans;
   in n >> k;
   ans = 1;
-  f(i, 1, k + 1) { ans = (ans * n) % m; }
+  f(i, 0, k) { ans = (ans * n) % m; }
   out ans % m << nl;
 }
 
