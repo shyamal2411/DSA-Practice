@@ -21,11 +21,29 @@ typedef vector<int> vi;
     cin >> arr[i];
 #define pr(arr, n)            \
   for (int i = 0; i < n; i++) \
-    cout << arr[i];
+    cout << arr[i] << " ";
 #define in cin >>
 #define out cout <<
 #define first fr
 #define second sc
+
+void editorial() {
+  int n, k;
+  in n >> k;
+  int arr[n];
+  read(arr, n);
+  int index = 0;
+  while (index < n - 1 && k > 0) {
+    if (arr[index] > 0) {
+      arr[index]--;
+      arr[n - 1]++;
+      k--;
+    } else
+      index++;
+  }
+  pr(arr, n);
+  out nl;
+}
 
 void solve() {
   int n, k, i, p, q, r, count = 0, j, flag, ans;
@@ -61,6 +79,7 @@ int32_t main() {
   t = 1;
   in t;
   while (t--) {
-    solve();
+    // solve();
+    editorial();
   }
 }
