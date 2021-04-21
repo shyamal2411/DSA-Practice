@@ -13,7 +13,6 @@ cin.tie(0);
  {
    ll int x, y;
    cin >> x >> y;
-
    cout << 100000007 << "\n";
  }
     
