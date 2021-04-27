@@ -16,9 +16,10 @@ using namespace std;
 #define in cin >>
 #define out cout <<
 
-void solve() {
+void solve2() {
   int n, k, t, i, p, q, r, s, count = 0, j, flag;
   string str;
+  in str;
   n = str.length();
   i = 0, j = n - 1;
   while (i < j) {
@@ -30,6 +31,24 @@ void solve() {
     i++;
     j--;
   }
+}
+
+void solve() {
+  int n, k, t, i, p, q, r, s, count = 0, j, flag;
+  string str, s1, s2;
+  in str;
+  n = str.length();
+  f(i, 0, n / 2) {
+    s1 = s1 + str[i];
+    s2 = s2 + str[n - 1 - i];
+  }
+  sort(s1.begin(), s1.end());
+  sort(s2.begin(), s2.end());
+
+  if (s1 == s2)
+    out "YES" << nl;
+  else
+    out "NO" << nl;
 }
 
 int32_t main() {
