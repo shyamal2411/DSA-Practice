@@ -51,9 +51,19 @@ int getSize(Node* root) {
 int maxSize(Node *root)
 {
     if(root==NULL)
+    return INT_MIN;
+
+   else
+    return max(root->key,max(maxSize(root->left),maxSize(root->right)));
+}
+
+int height(Node *root)
+{
+    if(root==NULL)
     return 0;
 
-    int count=0;
+    else
+    return max(height(root->left),height(root->right))+1;
 }
 
 int main() {
