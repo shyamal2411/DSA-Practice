@@ -47,7 +47,18 @@ void solve() {
     return;
   }
 
-  out "NO" << nl;
+  out "NO" << nl;A_Red
+}
+
+void solve1() {
+  int n, m, d;
+  in n >> m >> d;
+  int temp = (max(n, m) + min(n, m) - 1) / min(n, m);
+  if (temp - 1 <= d) {
+    out "YES" << nl;
+    return;
+  } else
+    out "NO" << nl;
 }
 
 int32_t main() {
@@ -55,7 +66,7 @@ int32_t main() {
   t = 1;
   in t;
   while (t--)
-    solve();
+    solve1();
 
   return 0;
 }
