@@ -3,8 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Function to count pairs from an array having GCD equal to
-// minimum element of that pair
+// Function to count pairs from an array having GCD equal to minimum element of that pair
 int CountPairs(int arr[], int N) {
   // Stores the resultant count
   int res = 0;
@@ -39,18 +38,15 @@ int CountPairs(int arr[], int N) {
         // If j is not equal to x/j
         if (j != x / j)
 
-          // Increment res
-          // by mp[x/j]
+          // Increment res by mp[x/j]
           res += mp[x / j];
       }
     }
   }
 
-  // Return the resultant count
   return res;
 }
 
-// Driver Code
 int main() {
   int arr[] = {2, 3, 1, 2};
   int N = sizeof(arr) / sizeof(arr[0]);
