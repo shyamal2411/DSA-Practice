@@ -1,4 +1,3 @@
-package Java_Lab;
 
 public class StaticNonStatic {
     // Static method

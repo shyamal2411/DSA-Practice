@@ -1,4 +1,4 @@
-package Java_Lab;
+
 class Calculate {
    int z;
 	
@@ -13,7 +13,7 @@ class Calculate {
    }
 }
 
-public class My_Calculation extends Calculate {
+ class My_Calculation extends Calculate {
    public void multi(int x, int y) {
       z = x * y;
       System.out.println("The product of the given numbers:"+z);

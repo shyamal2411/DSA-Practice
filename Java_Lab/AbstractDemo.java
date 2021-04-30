@@ -1,4 +1,4 @@
-package Java_Lab;
+
 
 abstract class AbstractDemo {
     public String fname = "John";

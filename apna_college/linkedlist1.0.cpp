@@ -10,6 +10,8 @@ class node {
     next = NULL;
   }
 };
+
+
 void insert(node*& head, int val) {
   // here we're taking head as by reference & not by value,so used *&
   node* n = new node(val);
@@ -24,11 +26,14 @@ void insert(node*& head, int val) {
 
   t->next = n;
 }
+
+
 void inserthead(node*& head, int val) {
   node* n = new node(val);
   n->next = head;
   head = n;
 }
+
 
 void display(node* head) {
   node* t = head;
@@ -39,6 +44,7 @@ void display(node* head) {
   cout << endl;
 }
 
+
 bool search(node* head, int key) {
   node* t = head;
   while (t != nullptr) {
@@ -48,12 +54,16 @@ bool search(node* head, int key) {
   }
   return false;
 }
+
+
 void deletehead(node*& head) {
   node* todelete = head;
   head = head->next;
 
   free(todelete);
 }
+
+
 void deletenode(node*& head, int val) {
     if(head==nullptr)
     return;
@@ -72,6 +82,28 @@ void deletenode(node*& head, int val) {
   t->next = t->next->next;
   free(to_del);
 }
+
+void makeCycle(node* &head, int pos) {
+node *temp =head;
+node *startNode;
+
+int count = 1;
+while(temp->next != NULL)
+{
+  if(count==pos){
+    startNode=temp;
+  }
+  temp = temp->next;
+  count++;
+}
+temp->next = startNode;
+}
+
+bool deletecycle(node* &head)
+{
+
+}
+
 int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
@@ -84,10 +116,11 @@ int main() {
   insert(head, 4);
   insert(head, 5);
   insert(head, 6);
-  inserthead(head, 8);
+  // inserthead(head, 8);
+  makeCycle(head, 3);
   display(head);
-  cout << search(head, 5);
-  deletenode(head, 3);
-  deletehead(head);
+  // cout << search(head, 5);
+  // deletenode(head, 3);
+  // deletehead(head);
   return 0;
 }

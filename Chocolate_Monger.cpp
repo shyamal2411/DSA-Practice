@@ -19,6 +19,19 @@ using namespace std;
 #define first fr
 #define second sc
 
+void solve1() {
+  int n, x;
+  in n >> x;
+  set<int> st;
+  f(i, 0, n) {
+    int type;
+    in type;
+    st.insert(type);
+  }
+  int count = st.size();
+  out min(n - x, count) << nl;
+}
+
 void solve() {
   int n, x, k, i, p, q, r, count = 0, j, flag, ans;
   cin >> n >> x;
@@ -27,11 +40,9 @@ void solve() {
   f(i, 0, n) {
     int x;
     cin >> x;
-
     mm[x]++;
   }
   int te = n - x;
-
   int te1 = mm.size();
 
   cout << min(te1, te) << "\n";
@@ -47,6 +58,6 @@ int32_t main() {
   t = 1;
   in t;
   while (t--) {
-    solve();
+    solve1();
   }
 }

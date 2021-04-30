@@ -1,4 +1,4 @@
-package Java_Lab;
+
 
 class isPrime {
 
@@ -27,7 +27,7 @@ class PrimeNumber {
         int n = Integer.parseInt(args[0]);
 
         isPrime obj = new isPrime();
-        boolean flag = obj.prime(n);
+       Boolean flag = obj.prime(n);
 
         // if (flag == true)
         // System.out.println(n + " Is prime");

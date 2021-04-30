@@ -1,4 +1,3 @@
-package Java_Lab;
 
 public class AccessMethodsCar {
     public static void main(String[] args) {

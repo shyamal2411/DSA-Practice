@@ -1,1 +1,0 @@
-{"name":"Local: Frog_Sort","url":"d:\\codes\\Frog_Sort.cpp","tests":[{"id":1612868950298,"input":"3\n3\n3 1 2\n1 4 5\n3\n3 2 1\n1 1 1\n4\n2 1 4 3\n4 1 2 4","output":"3\n6\n5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\codes\\Frog_Sort.cpp","group":"local","local":true}
