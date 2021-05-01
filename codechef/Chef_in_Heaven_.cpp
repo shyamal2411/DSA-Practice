@@ -49,12 +49,33 @@ void solve() {
   out "NO" << nl;
 }
 
+void solve2(){
+  int year, good=0, bad=0;
+  bool ans=false;
+  string s;
+  in year;
+  in s;
+  for( auto i: s)
+  {
+      if(i=='1')
+      good++;
+      else
+      bad++;
+      if(good>=bad)
+      ans=true;
+  }
+  if(ans)
+  out "yes"<<nl;
+  else
+  out "no"<<nl;
+}
+
 int32_t main() {
   FIO int t;
   t = 1;
   in t;
   while (t--)
-    solve();
+    solve2();
 
   return 0;
 }
