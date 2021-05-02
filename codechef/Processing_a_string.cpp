@@ -28,11 +28,17 @@ int n,k,i,p,q,r,count=0,j,flag,ans=0;
 out count<<nl;
 }
 
+void solve2()
+{
+  int n, k, i, p, q, r, count = 0, j, flag, ans = 0;
+  vector<string> s;
+  
+} 
 
 int32_t main(){
     FIO int t; t=1;
     in t;
-    while(t--) solve();
+    while(t--) solve2();
   
 return 0;
 }
