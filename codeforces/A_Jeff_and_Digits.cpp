@@ -30,23 +30,24 @@ void solve() {
   int n, k, i, p, q, r, count = 0, j, flag, ans = 0;
   in n;
 
-  int five = 0, zero = 0;
+  int count5 = 0, count0 = 0;
 
   f(i, 0, n) {
     int x;
     in x;
-
+  //count number of 5s & 0s
     if (x == 5) {
-      five++;
+      count5++;
     } else {
-      zero++;
+      count0++;
     }
   }
 
-  int temp = five / 9;
+  int temp = count5 / 9;
   temp *= 9;
 
-  if (zero == 0) {
+// from description
+  if (count0 == 0) {
     cout << -1;
     return;
   }
@@ -55,8 +56,10 @@ void solve() {
     return;
   }
 
-  f(i, 0, temp) { cout << 5; }
-  f(i, 0, zero) { cout << 0; }
+  f(i, 0, temp) 
+   cout << 5; 
+  f(i, 0, count0)  
+  cout << 0; 
 }
 
 int32_t main() {
