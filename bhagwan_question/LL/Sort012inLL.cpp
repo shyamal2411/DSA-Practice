@@ -40,8 +40,7 @@ Node* sortList(Node* head) {
   if (!head || !(head->next))
     return head;
 
-  Node* zerod =
-      newNode(0);  // to avoid null checks, we put 0 in arguemnt of newNode.
+  Node* zerod =newNode(0);  // to avoid null checks, we put 0 in arguemnt of newNode.
   Node* oned = newNode(0);
   Node* twod = newNode(0);
 
