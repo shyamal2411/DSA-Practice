@@ -1,8 +1,7 @@
 class Solution {
  public:
   void sumFunc(TreeNode* root, int& sum, bool flag) {
-    if (!root)
-      return;
+    if (!root)  return;
 
     if (flag && root && !root->left && !root->right) {
       sum += root->val;
