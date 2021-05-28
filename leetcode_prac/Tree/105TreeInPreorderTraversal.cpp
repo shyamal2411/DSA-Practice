@@ -1,11 +1,7 @@
 
 class Solution {
  public:
-  TreeNode* solve(vector<int>& preorder,
-                  vector<int>& inorder,
-                  int& rootIndex,
-                  int left,
-                  int right) {
+  TreeNode* solve(vector<int>& preorder, vector<int>& inorder, int& rootIndex, int left, int right) {
     if (left > right)
       return NULL;
 
@@ -26,4 +22,4 @@ class Solution {
     int rootIndex = 0;
     return solve(preorder, inorder, rootIndex, 0, inorder.size() - 1);
   }
-};  // learnt from discuss
+};  
