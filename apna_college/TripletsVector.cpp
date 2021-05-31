@@ -15,7 +15,7 @@ vector<vi> triplets(vi arr, int targetSum) {
     int k = n - 1;
     while (j < k) {
       int current_sum = arr[i];
-      current_sum += arr[i];
+      current_sum += arr[j];
       current_sum += arr[k];
 
       if (current_sum == targetSum){
