@@ -8,8 +8,7 @@ class Solution {
     if (targetSum == 0 and !root->left and !root->right)
       return true;
 
-    return hasPathSum(root->left, targetSum) ||
-           hasPathSum(root->right, targetSum);
+    return hasPathSum(root->left, targetSum) || hasPathSum(root->right, targetSum);
     // if either of the sides then true else false.
   }
 };
