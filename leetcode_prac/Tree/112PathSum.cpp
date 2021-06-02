@@ -10,6 +10,6 @@ class Solution {
 
     return hasPathSum(root->left, targetSum) ||
            hasPathSum(root->right, targetSum);
-    // if either of the sides then true else false
+    // if either of the sides then true else false.
   }
 };
