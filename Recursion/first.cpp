@@ -6,6 +6,6 @@ typedef vector<int> vi;
 #define read(arr,n) for(int i=0;i<n;i++)cin>>arr[i];
 
 int main(){
-
+cout<<"Hey!";
 return 0;
 }
