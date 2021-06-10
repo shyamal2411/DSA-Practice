@@ -7,12 +7,9 @@ typedef vector<int> vi;
   for (int i = 0; i < n; i++) \
     cin >> arr[i];
 
-int main() {
-  int n;
-  cin >> n;
-  vi v(n);
-  read(v, n);
-
+class Solution{
+ public:
+ void binarySearch(vi& v, int n){
   int to_find;
   cin >> to_find;
   int low = 0, high = n - 1;
@@ -32,8 +29,18 @@ int main() {
   else if (v[high] == to_find)
     cout << high << endl;
   else
-    cout << "NOT FOUND";
+  cout<<"Not found"<<endl;
+}
+};
 
+int main() {
+  int n;
+  cin >> n;
+  vi v(n);
+  read(v, n);
+  Solution bs;
+ bs.binarySearch(v,n);
+  
   return 0;
 }
 
