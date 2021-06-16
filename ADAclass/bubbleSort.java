@@ -17,11 +17,11 @@ public class bubbleSort {
 
     public static void main(String[] args) {
         Random numGenerator = new Random();
-        int[] arr = new int[10];
+        int[] arr = new int[10000];
 
         // random array upto 1000 length
-        for (int i = 1; i < 10; i++) {
-            arr[i] = numGenerator.nextInt(10);
+        for (int i = 1; i < 10000; i++) {
+            arr[i] = numGenerator.nextInt(10000);
         }
 
         /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -35,7 +35,7 @@ public class bubbleSort {
 
         // MAIN CODE
         bubbleSort m = new bubbleSort();
-        m.bubbleFn(arr, 10);
+        m.bubbleFn(arr, 10000);
 
         System.out.println("End time: ");
         long endTime = System.currentTimeMillis();
@@ -53,7 +53,7 @@ public class bubbleSort {
         System.out.print(startTime1);
         System.out.println();
 
-        m.bubbleFn(arr, 10);
+        m.bubbleFn(arr, 10000);
 
         System.out.println("End time after sorting: ");
         long endTime1 = System.currentTimeMillis();
