@@ -40,14 +40,14 @@ public class bubbleSort {
         System.out.println("End time: ");
         long endTime = System.currentTimeMillis();
         System.out.print(endTime);
-        System.out.println();
+        // System.out.println();
 
         long actualTime = endTime - startTime;
-        System.out.println("\n\n Total Time:  " + actualTime);
+        System.out.println("\nTotal Time: " + actualTime + " miliseconds");
 
         /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
         /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
+        System.out.println("\n");
         System.out.println("Start time after sorting: ");
         long startTime1 = System.currentTimeMillis();
         System.out.print(startTime1);
@@ -58,33 +58,33 @@ public class bubbleSort {
         System.out.println("End time after sorting: ");
         long endTime1 = System.currentTimeMillis();
         System.out.print(endTime1);
-        System.out.println();
+        // System.out.println();
 
         long actualTime1 = endTime1 - startTime1;
-        System.out.println("\n\nTotal Time:  " + actualTime1);
+        System.out.println("\nTotal Time for sorting: " + actualTime1 + " miliseconds");
 
         /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
         /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
+        System.out.println("\n");
         System.out.println("Start time for reverse sorting: ");
         long startTime2 = System.currentTimeMillis();
         System.out.print(startTime2);
         System.out.println();
-        for (int i = 0; i < arr.length; i++)
-            System.out.println(arr[i]);
+        // for (int i = 0; i < arr.length; i++)
+        // System.out.println(arr[i]); //unnecessary code
 
         System.out.println("End time after reverse sorting: ");
         long endTime2 = System.currentTimeMillis();
         System.out.print(endTime2);
-        System.out.println();
+        // System.out.println();
 
         long actualTime2 = endTime2 - startTime2;
-        System.out.println("\n\n Total Time in reverse sorted arr:  " + actualTime2);
+        System.out.println("\nTotal Time in reverse sorted arr: " + actualTime2 + " miliseconds");
 
         // PRINTING FUNCTION
-        for (int j = 0; j < arr.length; j++) {
-            System.out.print(arr[j] + "\t");
-        }
+        // for (int j = 0; j < arr.length; j++) {
+        // System.out.print(arr[j] + "\t");
+        // }
 
         // TIME TAKEN
         // long actualTime = endTime - startTime;
