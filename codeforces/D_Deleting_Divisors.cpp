@@ -26,10 +26,19 @@ typedef vector<int> vi;
 void solve() {
   int n, k, i, p, q, r, count = 0, j, flag, ans = 0;
   cin >> n;
-  if (n % 2 != 0)
+  if (n & 1) {
     cout << "Bob" << endl;
-  else
-    cout << "Alice" << endl;
+    return;
+  }
+  while (n % 2 == 0) {
+    count++;
+    n /= 2;
+  }
+  if (n == 1 && count & 1) {
+    out "Bob" << nl;
+    return;
+  }
+  out "Alice" << nl;
 }
 
 int32_t main() {
