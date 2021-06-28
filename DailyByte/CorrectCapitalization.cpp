@@ -1,82 +1,67 @@
-// C++ program for the above approach
+/*This question is asked by Google. Given a string, return whether or not it
+uses capitalization correctly. A string correctly uses capitalization if all
+letters are capitalized, no letters are capitalized, or only the first letter is
+capitalized.
+
+Ex: Given the following strings...
+
+"USA", return true
+"Calvin", return true
+"compUter", return false
+"coding", return true
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
-// Function to check if the
-// character c is in lowercase or not
 bool isLower(char c) {
   return c >= 'a' and c <= 'z';
 }
 
-// Function to check if the
-// character c is in uppercase or not
 bool isUpper(char c) {
   return c >= 'A' and c <= 'Z';
 }
 
-// Utility function to check if uppercase
-// characters are used correctly or not
-bool detectUppercaseUseUtil(string S) {
-  // Length of string
-  int N = S.size();
+bool detectUppercaseUseUtil(string s) {
+  int n = s.size();
   int i;
 
-  // If the first character is in lowercase
-  if (isLower(S[0])) {
+  if (isLower(s[0])) {
     i = 1;
-    while (S[i] && isLower(S[i]))
+    while (s[i] && isLower(s[i]))
       ++i;
-    return i == N ? true : false;
+    return i == n ? true : false;
   }
 
-  // Otherwise
   else {
     i = 1;
 
-    // Check if all characters
-    // are in uppercase or not
-    while (S[i] && isUpper(S[i]))
+    while (s[i] && isUpper(s[i]))
       ++i;
 
-    // If all characters are
-    // in uppercase
-    if (i == N)
+    if (i == n)
       return true;
     else if (i > 1)
       return false;
 
-    // Check if all characters except
-    // the first are in lowercase
-    while (S[i] && isLower(S[i]))
+    while (s[i] && isLower(s[i]))
       ++i;
-    return i == N ? true : false;
+    return i == n ? true : false;
   }
 }
 
-// Function to check if uppercase
-// characters are used correctly or not
-void detectUppercaseUse(string S) {
-  // Stores whether the use of uppercase
-  // characters are correct or not
-  bool check = detectUppercaseUseUtil(S);
+void detectUppercaseUse(string s) {
+  bool check = detectUppercaseUseUtil(s);
 
-  // If correct
   if (check)
     cout << "Yes";
-
-  // Otherwise
   else
     cout << "No";
 }
 
-// Driver Code
 int main() {
-  // Given string
-  string S = "GeeKs";
+  string s = "shyamaL";
 
-  // Function call to check if use of
-  // uppercase characters is correct or not
-  detectUppercaseUse(S);
+  detectUppercaseUse(s);
 
   return 0;
 }
