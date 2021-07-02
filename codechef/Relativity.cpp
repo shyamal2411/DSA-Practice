@@ -15,7 +15,7 @@ typedef vector<int> vi;
 #define read(arr, n)          \
   for (int i = 0; i < n; i++) \
     cin >> arr[i];
-#define pr(arr, n)            \
+#define pr(arr, n)             \
   for (int i = 0; i < n; i++) \
     cout << arr[i];
 #define in cin >>
