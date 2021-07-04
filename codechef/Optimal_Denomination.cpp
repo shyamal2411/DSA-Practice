@@ -30,7 +30,7 @@ void solve() {
   read(v, n);
   sort(v.begin(), v.end());
   k = v[0];
-  rf(i, 1, k) {
+  rf(i, 1, k) { 
     num = 0;
     f(j, 0, n) {
       if (v[j] % i == 0)
