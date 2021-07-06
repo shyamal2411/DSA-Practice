@@ -4,10 +4,14 @@ public class insertionSort {
 
     void insertFn(int[] arr, int n) {
 
-        for (int i = 1; i < n; i++) {
+        // for loop run till n
+        //TIME: O(n)
+        for (int i = 1; i < n; i++) { 
             int val = arr[i];
             int j = i - 1; // j starts from i-1th element
 
+            //j is dependent on i
+            //TIME: O(n)
             while (arr[j] > val && j >= 0) {
                 arr[j + 1] = arr[j];
                 j--;
@@ -15,6 +19,8 @@ public class insertionSort {
             arr[j + 1] = val;
         }
 
+            // TOTAL TIME TAKEN: O(n) for- for loop and while loop inside the for loop- O(n)
+            //TIME COMPLEXITY: O (n^2)
     }
 
     public static void main(String[] args) {

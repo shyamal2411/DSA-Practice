@@ -3,11 +3,14 @@ import java.util.*;
 public class SelectionSort {
 
     void selectFn(int[] arr, int n) {
-
+  
+        // for loop run till n
+       //TIME: O(n)
         for (int i = 0; i < n - 1; i++) {
-
             int index = i;
 
+            //j is dependent on i
+            //TIME: O(n)
             for (int j = i + 1; j < n; j++) {
                 if (arr[j] < arr[index])
                     index = j; // search the lowest index
@@ -18,6 +21,8 @@ public class SelectionSort {
             arr[index] = arr[i];
             arr[i] = smallest;
         }
+        // TOTAL TIME TAKEN: O(n) for- for loop and while loop inside the for loop- O(n)
+        // TIME COMPLEXITY: O (n^2)
     }
 
     public static void main(String[] args) {
