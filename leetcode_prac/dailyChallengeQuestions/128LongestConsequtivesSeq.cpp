@@ -23,7 +23,7 @@ typedef vector<string> vs;
 
 class Solution {
  public:
-  // incorrect aproach
+  // incorrect aproach, CORRECT ONE AT LAST
   int longestConsecutive(vector<int>& nums) {
     sort(nums.begin(), nums.end());
     int count = 0;
@@ -35,7 +35,7 @@ class Solution {
   }
 
   int longestConsecutive2(vector<int>& nums) {
-    int ans = 0, count = 0, n=nums.size();
+    int ans = 0, count = 0, n = nums.size();
     sort(nums.begin(), nums.end());
     vector<int> v;
     v.push_back(nums[0]);
@@ -44,7 +44,31 @@ class Solution {
       if (nums[i] != nums[i - 1])
         v.push_back(nums[i]);
     }
-   
+
+    for (int i = 0; i < v.size(); i++) {
+      if (i > 0 && v[i] == v[i - 1] + 1)
+        count++;
+      else
+        count = 1;
+
+      ans = max(ans, count);
+    }
+    return ans;
+  }
+  // CORRECT APPROACH
+  int longestConsecutive(vector<int>& nums) {
+    if (nums.size() == 0)
+      return 0;
+    int ans = 0, count = 0, n = nums.size();
+    sort(nums.begin(), nums.end());
+    vector<int> v;
+    v.push_back(nums[0]);
+
+    for (int i = 1; i < n; i++) {
+      if (nums[i] != nums[i - 1])
+        v.push_back(nums[i]);
+    }
+
     for (int i = 0; i < v.size(); i++) {
       if (i > 0 && v[i] == v[i - 1] + 1)
         count++;
@@ -69,7 +93,7 @@ void solve() {
 int32_t main() {
   FIO int t;
   t = 1;
-//   in t;
+  //   in t;
   while (t--)
     solve();
 
