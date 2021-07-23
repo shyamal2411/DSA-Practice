@@ -1,8 +1,4 @@
-
-//cpp program to execute above code
-#include<iostream>
-#include<vector>
-#include<unordered_map>
+#include<bits/stdc++.h>
 using namespace std;
 
 class Solution {
@@ -22,7 +18,7 @@ public:
     }
 };
 
-int main()
+int32_t main()
 {
     vector<vector<int>> rectangles;
     rectangles.push_back({1,2});
