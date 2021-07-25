@@ -25,7 +25,7 @@ int isPalindrome(string s) {
       j--;
 
     if (toupper(s[i]) != toupper(s[j]))
-      cout << "NO" << endl;
+      cout << "NO\n";
   }
   cout << "YES" << endl;
 }
