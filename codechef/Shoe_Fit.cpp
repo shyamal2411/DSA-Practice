@@ -1,5 +1,6 @@
 #include<bits/stdc++.h> 
 using namespace std;
+/* /*https://www.codechef.com/COOK131C/problems/SHOEFIT */
 
 #define int long long 
 #define nl "\n"
