@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using namespace std;
 class Solution {
  public:
   vector<int> twoSum(vector<int>& nums, int target) {
@@ -29,3 +31,16 @@ class Solution {
 // this is O(n).
 
 /*https://leetcode.com/problems/two-sum */
+
+int main() {
+  //vector<int> nums = {2, 7, 11, 15};
+  vector<int> nums = {3, 2, 4};
+  int target = 6;
+  Solution mySolution;
+  vector<int> vec = mySolution.twoSum(nums, target);
+  for (int i = 0; i < vec.size(); i++) {
+    cout << vec[i] << " ";
+  }
+  cout << endl;
+  return 0;
+}
