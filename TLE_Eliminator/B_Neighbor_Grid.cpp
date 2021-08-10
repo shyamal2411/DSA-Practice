@@ -3,6 +3,7 @@ using namespace std;
 
 //DAY-2 10/8/2021
 // https://codeforces.com/problemset/problem/1375/B
+// https://codeforces.com/contest/1375/submission/125438700
 #define int long long 
 #define nl "\n"
 const int M=1e9+7;

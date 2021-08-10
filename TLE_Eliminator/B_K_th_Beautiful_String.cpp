@@ -1,6 +1,9 @@
 #include<bits/stdc++.h> 
 using namespace std;
 
+// DAY-2
+// https://codeforces.com/problemset/problem/1328/B
+// https://codeforces.com/contest/1328/submission/125485845
 #define int long long 
 #define nl "\n"
 const int M=1e9+7;
