@@ -65,10 +65,23 @@ cout<<0<<nl;
 
 }
 
+void solve2(){
+      int a1,a2,a3,a4,a5,a6,a7,a8,a9,a10;
+	    cin>>a1>>a2>>a3>>a4>>a5>>a6>>a7>>a8>>a9>>a10;
+	    int s=a1+a3+a5+a7+a9;
+	    int b=a2+a4+a6+a8+a10;
+	    if(s==b)
+	    cout<<"0\n";
+	    else if(s>b)
+	    cout<<"1\n";
+	    else
+	    cout<<"2\n";
+}
+
 int32_t main(){
     FIO int t; t=1;
     in t;
-    while(t--) solve1();
+    while(t--) solve2();
   
 return 0;
 }
