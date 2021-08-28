@@ -8,7 +8,6 @@
 #pip install html5lib
 
 import requests
-import csv
 from bs4 import BeautifulSoup
 url = "https://shyamal2411.github.io/TypeTest/"
 
@@ -38,5 +37,4 @@ meta = soup.find_all("meta")
 
 file = open("Try.csv","w")
 csv_writer = csv.writer(file)
-print(meta[0])
 
