@@ -20,6 +20,34 @@ public:
         return subs;
     }
 };
+
+//TLE ELIMINATOR TASK- 29/08/2021
+class Solutionn {
+public:
+    int n;
+    vector<vector<int>> ans;
+    vector<int> eachpair;
+    
+    vector<vector<int>> subsets(vector<int>& nums) {
+        n=nums.size();
+        backTrack(0, nums);
+        
+        return ans;
+    }
+    
+    void backTrack(int index, vector<int>& nums){
+        if(index == n)
+            ans.push_back(eachpair);
+        else{
+            eachpair.push_back(nums[index]);
+            backTrack(index+1, nums);
+            eachpair.pop_back();
+            backTrack(index+1, nums);
+        }
+    }
+};
+
+
 int main() {
     vector<int> nums;
     nums.push_back(1);
