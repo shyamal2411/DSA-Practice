@@ -41,6 +41,28 @@ public:
 // next permutation: 
 // https://www.geeksforgeeks.org/stdnext_permutation-prev_permutation-c/
 
+//3rd APPROACH - TLE ELIMINATORS DAILY TASK
+class Solution3 {
+public:
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<vector<int>> per;
+        permuteHelp(nums, 0, per);
+        return per;
+    }
+    void permuteHelp(vector<int> nums, int i, vector<vector<int>>& per){
+        if(i==nums.size()){
+            per.push_back(nums);
+        }
+        else{
+            for(int j=i;j<nums.size();j++){
+                swap(nums[i], nums[j]);
+                permuteHelp(nums, i+1, per);
+            }
+        }
+    }
+};
+
+
 int main(){
     Solutionn Sol;
     vector<int> nums{1,2,3};
