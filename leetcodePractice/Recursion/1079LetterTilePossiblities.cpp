@@ -25,6 +25,27 @@ public:
         backTrack(tiles, 0, count);
         return count;
     }
+  
+    set<string> ans;
+    map<int, int> flag;
+    string s;
+    int numTilePossibilities2(string tiles) {
+        solve(tiles);
+        
+        return ans.size();
+    }
+    void solve(string tiles){
+        for(int i=0;i<tiles.size();i++){
+            if(flag[i]!=1){
+                s.push_back(tiles[i]);
+                flag[i]=1;
+                ans.insert(s);
+                solve(tiles);
+                flag[i]=0;
+                s.pop_back();
+            }
+        }
+    }
 };
 
 
@@ -42,6 +63,6 @@ public:
 int main(){
     Solution s;
     string tiles; cin>>tiles;
-    cout<<s.numTilePossibilities(tiles)<<endl;
+    cout<<s.numTilePossibilities2(tiles)<<endl;
     return 0;
 }
