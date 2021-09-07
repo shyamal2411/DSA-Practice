@@ -1,25 +1,38 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    bool lemonadeChange(vector<int>& bills) {
-        int five=0, ten=0;
-        for(int i: bills){
-            if(i==5)
+    bool lemonadeChange(vector<int> &bills)
+    {
+        int five = 0, ten = 0;
+        for (int i : bills)
+        {
+            if (i == 5)
                 five++;
-            else if(i==10){
-                if(five ==0) return false;
-                five --;
-                ten ++;
+            else if (i == 10)
+            {
+                if (five == 0)
+                    return false;
+                five--;
+                ten++;
             }
-            else{
-                if(five>0 && ten>0){
+            else
+            {
+                if (five > 0 && ten > 0)
+                {
                     five--;
                     ten--;
-                }else if(five>=3){
-                five-=3;
-                }else {return false;}
+                }
+                else if (five >= 3)
+                {
+                    five -= 3;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
         return true;
@@ -28,10 +41,11 @@ public:
 // Time: O(n)
 // Space: O(1)
 
-int main(){
+int main()
+{
     Solution ss;
-    vector<int> bills={5,5,5,10,20};
-    cout<<ss.lemonadeChange(bills)<<endl;
+    vector<int> bills = {5, 5, 5, 10, 20};
+    cout << ss.lemonadeChange(bills) << endl;
     return 0;
 }
 /*
