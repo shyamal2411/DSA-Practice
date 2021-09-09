@@ -47,6 +47,20 @@
  * right(right) {}
  * };
  */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class TreeNode {
+ public:
+  int val;
+  TreeNode *left;
+  TreeNode *right;
+  TreeNode() : val(0), left(nullptr), right(nullptr) {}
+  TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+  TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+                                                     right(right) {}
+};
 class Solution {
  public:
   TreeNode* mergeTrees(TreeNode* root1, TreeNode* root2) {
@@ -70,3 +84,15 @@ class Solution {
     return root1;  // return the primary tree
   }
 };
+
+//main function
+int main() {
+  TreeNode* root1 = new TreeNode(1, new TreeNode(3, new TreeNode(5), NULL),
+                                 new TreeNode(2, NULL, new TreeNode(9)));
+  TreeNode* root2 = new TreeNode(2, new TreeNode(1, new TreeNode(4), NULL),
+                                 new TreeNode(3, NULL, new TreeNode(7)));
+  Solution s;
+  TreeNode* res = s.mergeTrees(root1, root2);
+  cout<<s.mergeTrees(root1, root2)<<endl;
+  return 0;
+}
