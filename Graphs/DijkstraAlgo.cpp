@@ -19,7 +19,7 @@ int main(){
     vector<int> distTo(n+1, INT_MAX); //1-indexed array for calculating shortest path
 
     distTo[source] = 0;
-    pq.push(make_pair(0, source)); // (dist, from)
+    pq.push(make_pair(0, source)); // these are the pair of (dist, from)
 
     while(!pq.empty()){
         int dist = pq.top().first;
