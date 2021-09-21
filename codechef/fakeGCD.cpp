@@ -1,6 +1,7 @@
 #include<bits/stdc++.h> 
 using namespace std;
 
+// https://www.codechef.com/submit/FAKEGCD
 #define int long long 
 #define nl "\n"
 const int M=1e9+7;
@@ -40,11 +41,17 @@ int n,k,i,p,q,r,count=0,j,flag,ans=0;
     cout<<endl;
 }
 
+//Codechef solution upsolved
+void solve1(){
+    int n;
+    cin>>n;
+    for(int i=1;i<=n;i++){cout<<i<<endl;}
+}
 
 int32_t main(){
     FIO int t; t=1;
     in t;
-    while(t--) solve();
+    while(t--) solve1();
   
 return 0;
 }
