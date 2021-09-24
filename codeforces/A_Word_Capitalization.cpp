@@ -1,22 +1,35 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h> 
+#include<string>
+#include<algorithm>
 using namespace std;
 
-#define ll long long
-#define fo(i, n) for (int i = 0; i < n; i++)
+#define int long long 
+#define nl endl
+#define f(i,a,n) for(int i=a;i<n;i++)
+#define rf(i,a,n) for(int i=n-1;i>=a;i--)
+#define read(arr,n) for(int i=0;i<n;i++)cin>>arr[i];
+#define pr(arr,n) for(int i=0;i<n;i++)cout<<arr[i];
+#define in cin>>
+#define out cout<<
 
-int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-  ll int n, k, t, i, p, q, r, s, count = 0, j;
-
+void solve(){
+int n,k,t,i,p,q,r,s,count=0,j,flag;
   string str;
-  cin >> str;
-  str[0] = towupper(str[0]);
-  cout << str << endl;
-  //! REMEMBER NOT TO CONVERT THE REST OF THE STRING TO LOWER CASE, AS PER THE
-  //! FIRST TEST CASE
-  //! THIS FUNCTION CAN BE USED TO TRANSFORM THE WHOLE STRING TO UPPER OR LOWER
-  //! CASE
-  //*    transform(sl.begin(), sl.end(), sl.begin(), ::tolower);
-  return 0;
+  in str;
+  str[0] = towupper(str[0]);  
+  out str;
+}
+
+
+int32_t main(){
+    ios_base::sync_with_stdio(false);cin.tie(NULL);
+    cin.tie(0);
+    cout.tie(0);
+    
+    int t;
+    t=1;
+    //in t;
+    while(t--){
+        solve();  
+    }    
 }

@@ -1,38 +1,60 @@
 #include <bits/stdc++.h>
 #include <algorithm>
 #include <string>
+#include <vector>
 using namespace std;
 
-#define ll long long
-#define fo(i, n) for (int i = 0; i < n; i++)
+#define int long long
+#define nl endl
+#define f(i, a, n) for (int i = a; i < n; i++)
+#define rf(i, a, n) for (int i = n - 1; i >= a; i--)
+#define read(arr, n)          \
+  for (int i = 0; i < n; i++) \
+    cin >> arr[i];
+#define pr(arr, n)            \
+  for (int i = 0; i < n; i++) \
+    cout << arr[i];
+#define in cin >>
+#define out cout <<
+#define first fr
+#define second sc
 
-int main() {
-  ll int sum = 0, n, k, t, i, p, q, r, s, count = 0, j;
+void solve() {
+  int n, k, i, p, q, r, count = 0, j, flag, ans;
+  in n;
 
-  while (cin >> n) {  //*!This is to be learnt! while(cin>>n),if we don't do
-                      //this, program willl give TLE!!!*/
-    long long arr[n];
-    sum = 0;
-    fo(i, n) {
-      cin >> arr[i];
-      sum += arr[i];  // adding up the money.
-    }                 // end of for
-    sum = sum / 2;
+  vector<int> v(n);
 
-    sort(arr, arr + n);  // sorting in ascending order of value
+  int sum = 0;
+  f(i, 0, n) {
+    in v[i];
+    sum += v[i];  // count the number of coins we have.
+  }
+  sort(v.begin(), v.end(), greater<int>());
 
-    count = 0;
-    int ans = 0;
+  ans = 0;
+  int count1 = 0;
 
-    for (i = n - 1; i >= 0; i--) {
-      ans += arr[i];
-      count++;
-
-      if (ans > sum)
-        break;
+  for (auto itr : v) {
+    count1 += itr;
+    ans++;
+    if (count1 > sum / 2) {
+      break;
     }
-  }  // end of while
-  cout << count << endl;
+  }
+  cout << ans << "\n";
+}
 
-  return 0;
+int32_t main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+  cin.tie(0);
+  cout.tie(0);
+
+  int t;
+  t = 1;
+  // in t;
+  while (t--) {
+    solve();
+  }
 }
