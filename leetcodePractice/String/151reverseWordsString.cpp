@@ -20,9 +20,9 @@ public:
 int main()
 {
     Solution ss;
-    // string s="the sky is blue";
+    string s="the sky is blue";
     // string s="Let's take LeetCode contest";
-    string s="God Ding";
+    // string s="God Ding";
     cout<<ss.reverseWords(s)<<endl;
     return 0;
 }
