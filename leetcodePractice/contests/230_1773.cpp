@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
 class Solution {
  public:
   int countMatches(vector<vector<string>>& items, string ruleKey, string ruleValue) {
@@ -23,3 +27,10 @@ class Solution {
     return count;
   }
 };
+
+int main(){
+  Solution s;
+  vector<vector<string>> items = {{"red", "red", "red"}, {"blue", "blue", "blue"}};
+  cout << s.countMatches(items, "color", "red") << endl;
+  return 0;
+}
