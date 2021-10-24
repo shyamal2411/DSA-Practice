@@ -14,13 +14,10 @@ int main()
 #endif
 	ll int n, i, p, q, count, j, t;
 
-	cin >> n;
-	int arr[n];
 
-	for (i = 0; i < n; i++)
-	{
-		cin >> arr[i];  //taking input
-	}
+	int arr[]={21,22,9,3,11,17,7,20,38,30,37,24,71,4,33,72,69,42,63,66,68,47,44,48,52,41,55,53,56};
+	n=sizeof(arr)/sizeof(arr[0]);
+	
 	for (i = 0; i < n - 1; i++)
 	{
 		for (j = i + 1; j < n; j++)
