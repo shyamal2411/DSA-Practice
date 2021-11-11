@@ -36,10 +36,24 @@ it either arrives from left or above. If we use dp[i][j] for the number of uniqu
  then the state equation is dp[i][j] = dp[i][j - 1] + dp[i - 1][j]. 
  Moreover, we have the base cases dp[0][j] = dp[i][0] = 1 for all valid i and j.
 */
+class Best_Solution {
+public:
+    //more optimized solution than DP
+    int uniquePaths(int m, int n) {
+        int nn=n+m-2;
+        int r=m-1;
+        double res=1;
+        
+        for(int i=1;i<=r;i++)
+            res=res*(nn-r+i)/i;
+        
+        return (int)res;
+    }
+};
 
 int main(){
     int m=3,n=7;
-    Solution Sol;
+    DP_Solution Sol;
     int result=Sol.uniquePaths(m,n);
     cout<<result<<endl;
     return 0;
