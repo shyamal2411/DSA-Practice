@@ -30,6 +30,43 @@ public:
     }
 };
 
+// https://youtu.be/o6nPTWVTgoA
+class Solution2 {
+public:
+    vector<vector<int>> ans;
+    int n;
+    vector<int> adj[1000];
+    vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {
+        n = graph.size();
+        
+        //adj list
+        for(int i=0;i<graph.size();i++){
+            for(auto j: graph[i])
+                adj[i].push_back(j);
+        }
+        vector<int> a;
+        a.push_back(0);
+        for(auto i:adj[0])
+            dfs(i,a);
+        
+        return ans;
+    }
+    void dfs(int node, vector<int> &a){
+        if(node == n-1) //if we reach the final node 
+        {
+            a.push_back(n-1); //push the final node in the vector
+            ans.push_back(a);
+            a.pop_back(); //as we reached, empty the vector
+            return; 
+        }
+        a.push_back(node); //if there's a node having 2 children
+        for(auto i:adj[node])
+            dfs(i,a);
+        a.pop_back();
+        return;
+    }
+};
+
 
 int main(){
     Solution s;
