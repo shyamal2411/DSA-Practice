@@ -1,74 +1,89 @@
 #include<bits/stdc++.h>
 using namespace std;
 
- struct TrieNode{
-        struct TrieNode* children[26];
-        bool isEnd;
-        
-        TrieNode(){
-            for(int i = 0; i< 26; i++){
-                children[i] = NULL;
-            }
-            isEnd = false;
-        }
-    };
-    
 
+
+struct Node {
+    Node *links[26]; 
+    bool flag = false; 
+    
+    bool containsKey(char ch) {
+        return (links[ch - 'a'] != NULL); 
+    }
+    Node* get(char ch) {
+        return links[ch-'a']; 
+    }
+    void put(char ch, Node* node) {
+        links[ch-'a'] = node; 
+    }
+    void setEnd() {
+        flag = true; 
+    }
+    bool isEnd() {
+        return flag; 
+    }
+}; 
 class Trie {
+private:
+    Node *root; 
 public:
-   struct TrieNode* root;
+
     Trie() {
-        root = new TrieNode();    
+        root = new Node(); 
     }
     
+    /** Inserts a word into the trie. */
+    //Time-O(Length of the word)
     void insert(string word) {
-        if(!root) return;
-        
-        struct TrieNode* ptrNode = root;
-        
-        for(int i = 0; i<word.size(); i++){
-            int index = word[i] - 'a';
-            if(ptrNode -> children[index] == NULL)
-            {
-                struct TrieNode* temp = new TrieNode();
-                ptrNode->children[index] = temp;
+        Node *node = root;
+        for(int i = 0;i<word.size();i++) {
+            if(!node->containsKey(word[i])) {
+                node->put(word[i], new Node()); 
             }
-            ptrNode = ptrNode->children[index];
+            node = node->get(word[i]); 
         }
-        ptrNode ->isEnd=true;
-        return;
+        node->setEnd(); 
     }
     
+    /** Returns if the word is in the trie. */
+    //Time-O(length)
     bool search(string word) {
-        if(!root) return false;
-        
-        struct TrieNode* ptrNode = root;
-        for(int i = 0;i<word.size();i++){
-            int index = word[i] - 'a';
-            if(ptrNode->children[index]==NULL)
-                return false;
-            ptrNode = ptrNode->children[index];
+        Node *node = root; 
+        for(int i = 0;i<word.size();i++) {
+            if(!node->containsKey(word[i])) {
+                return false; 
+            }
+            node = node->get(word[i]); 
         }
-        if(ptrNode==NULL)
-            return false;
-        else
-            return ptrNode->isEnd;
+        // if(node->isEnd()) {
+        //     return true; 
+        // }
+        // return false; 
+        return node->isEnd(); 
     }
     
+    /** Returns if there is any word in the trie that starts with the given prefix. */
+    //Time-O(length)
     bool startsWith(string prefix) {
-        if(root==NULL)
-            return false;
-        struct TrieNode* ptrNode = root;
-        for(int i=0;i<prefix.size(); i++){
-            int index =prefix[i] - 'a';
-            if(ptrNode->children[index]==NULL)
-                return false;
-            ptrNode = ptrNode->children[index];
+        Node *node = root; 
+        for(int i = 0;i<prefix.size();i++) {
+            if(!node->containsKey(prefix[i])) {
+                return false; 
+            }
+            node = node->get(prefix[i]); 
         }
-        if(ptrNode==NULL)
-            return false;
-        else 
-            return true;
+        return true;  
+        // The only diff between search and startswith is this return part
     }
 };
 
+int main(){
+    Trie trie;
+    trie.insert("apple");
+    cout<<trie.search("apple")<<endl;
+    cout<<trie.search("app")<<endl;
+    cout<<trie.startsWith("app")<<endl;
+    trie.insert("app");
+    cout<<trie.search("app")<<endl;
+    return 0;
+}
