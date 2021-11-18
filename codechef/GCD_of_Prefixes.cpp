@@ -37,13 +37,35 @@ if(c)
     cout<<nl;
 }
 else cout << "-1\n";
-
 }
+
+void upsolve(){
+    int n;
+    cin>>n;
+    int b[n+1];
+    for(int i=1;i<=n;i++)
+    {
+        cin>>b[i];
+    }
+    int good=1;
+    for(int i=2;i<=n;i++){
+        if(b[i-1]%b[i])
+        good=0;
+    }
+    if(good){
+        for(int i=1;i<=n;i++)
+        cout<<b[i]<<" ";
+        cout<<nl;
+    }
+    else
+    cout<<"-1\n";
+}
+
 
 int32_t main(){
     FIO int t; t=1;
     in t;
-    while(t--) psi();
+    while(t--) upsolve();
   
 return 0;
 }
