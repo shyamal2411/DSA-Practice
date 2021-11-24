@@ -6,73 +6,42 @@ struct ListNode {
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
+
 class Solution {
 public:
     void reorderList(ListNode* head) {
-    if(head==NULL || head->next==NULL)
-        return;
-        
-        //head of first half;
-        ListNode* l1=head;
-        //head of second half
-        ListNode* slow=head;
-        
-        //tail of second half
-        ListNode* fast=head;
-        //tail of  first half
-        ListNode* prev=NULL;
-        
-        while(fast!=NULL && fast->next!=NULL)
-        {
-            prev=slow;
-            slow=slow->next;
-            fast=fast->next->next;
+        // exiting for empty lists
+        if (!head) return;
+        // finding the central node with the hare approach
+        ListNode *tmp = head, *half = head, *prev = NULL;
+        while (tmp->next && tmp->next->next) {
+            tmp = tmp->next->next;
+            half = half->next;
         }
-        prev->next=NULL;
-        ListNode* l2=reverse(slow);
-        merge(l1,l2);
-    }
-    
-public:
-    // ListNode* reverse(ListNode* head){
-    //     ListNode* prev=NULL;
-    //     ListNode* current=head;
-        
-    //     while(current!=NULL)
-    //     {
-    //         ListNode* nextNode=current->next;
-    //         current->next=prev;
-    //         prev=current;
-    //         current=nextNode;
-    //     }
-    //     return prev;
-    // }
-    ListNode* reverse(ListNode* head) {
-    ListNode *prev = NULL, *current = NULL;
-    while (head) {
-      current = head -> next;
-      head -> next = prev;
-      prev = head;
-      head = current;
-    }
-    return prev;
-  }
-public:
-    void merge(ListNode* l1, ListNode* l2){
-        while(l1!=NULL){
-            ListNode* l1_next=l1->next;
-            ListNode* l2_next=l2->next;
-            
-            l1->next=l2;
-            if(l1_next==NULL)
-            {break;}
-            
-            l2->next ==l1_next;
-            l1=l1_next;
-            l2=l2_next;
+        // adding one bit in case of lists with even length
+        if (tmp->next) half = half->next;
+        // reversing the second half
+        while (half) {
+            tmp = half->next;
+            half->next = prev;
+            prev = half;
+            half = tmp;
         }
+        half = prev;
+        // merging the 2 lists
+        while (head && half) {
+            tmp = head->next;
+            prev = half->next;
+            head->next = half;
+            half->next = tmp;
+            head = tmp;
+            half = prev;
+        }
+        // closing when we had even length arrays
+        if (head && head->next) head->next->next = NULL;
     }
 };
+
 int main(){
     ListNode *l1=new ListNode(1);
     ListNode *l2=new ListNode(2);
