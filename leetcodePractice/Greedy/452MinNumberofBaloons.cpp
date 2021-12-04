@@ -3,8 +3,7 @@ using namespace std;
 
 // https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
 
-// We just neeed to find the intersection between the intervals 
-// and count those intersections 
+// We just neeed to find the intersection between the intervals and count those intersections 
 // if there is no intersection then count will be incremented.
 class Solution {
 public:
