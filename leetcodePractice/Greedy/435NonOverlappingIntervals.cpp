@@ -4,8 +4,8 @@ using namespace std;
 // https://leetcode.com/problems/non-overlapping-intervals/
 class Solution {
 public:
-    static bool comp(vector<int> &ele1, vector<int> &ele2){
-    return ele1[1]<ele2[1];    
+    static bool comp(vector<int> &el1, vector<int> &el2){
+    return el1[1]<el2[1];    
     }
     
     int eraseOverlapIntervals(vector<vector<int>>& intervals) {
@@ -24,7 +24,7 @@ public:
 
 int main(){
     Solution ss;
-    vector<vector<int>> intervals = {{1,2},{2,3},{3,4},{1,3}};
+    vector<vector<int>> intervals = {{1,2},{2,3},{3,4},{1,3},{5,6}};
     cout<<ss.eraseOverlapIntervals(intervals);
     return 0;
 }
