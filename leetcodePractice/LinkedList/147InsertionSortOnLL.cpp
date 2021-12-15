@@ -62,3 +62,30 @@ int main(){
     cout<<ss.insertionSortList(head)->val<<endl;
     return 0;
 }
+
+/*
+https://leetcode.com/problems/insertion-sort-list/discuss/920433/C%2B%2B-Pointer-based-Solution-Explained-100-Time-90-Space
+Ah, gotta love starting the day with classic algorithms you otherwise would just see again on textbooks and manuals :)
+
+In order to proceed with this one, we need to first of all check if we are dealing with an empty list: if so, we just return NULL.
+
+Otherwise, we create 3 support variables, all ListNode pointers:
+
+tail, initialised to be head will delimit up to where our sorted domain extends;
+curr is the node we are currently considering and putting in sorted order;
+iter, finally, it is a support variable for when we need to go and splice curr if it is not the newest minimum or the newest maximum; 
+I know I might have not used it, just splicing curr so that it would bubble up to his position, 
+but that seemed needlessly expensive and not worth saving the tiny amount of memory an extra pointer would cost us - so, 
+unless your interviewer really wants you to consider other approaches (like dealing with devices of very little memory, but then not sure how they would handle linked lists), just discuss it quickly and make your own call of what is best.
+Then we have our main loop and we will proceed until we have something else to parse, that is to say as long as tail->next. 
+Notice we do not need to check if tail exist, since we initialised it to head and we checked before that head has to be non NULL.
+Inside our loops we will:
+
+check if curr is the newest maximum and thus replace tail with it;
+get the next value after tail out and assign it to curr;
+check if curr is the newest minimum and thus replace head with it;
+check for all the other cases, assigning head to iter initially and gradually increasing it, checking if curr fits between iter and iter->next.
+Once we are done parsing the whole list, we return head :)
+
+
+*/
