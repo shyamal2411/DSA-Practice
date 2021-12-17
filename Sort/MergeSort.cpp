@@ -1,55 +1,68 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void merge(int arr[], int l, int mid, int r) {
-  int n = mid - l + 1;
-  int m = r - mid;
+void merge(int arr[], int left, int mid, int right)
+{
+  int n = mid - left + 1;
+  int m = right - mid;
 
   int a[n];
-  int b[m];  // temporary arrays
+  int b[m]; // temporary arrays
 
-  for (int i = 0; i < n; i++) {
-    a[i] = arr[l + i];
+  for (int i = 0; i < n; i++)
+  {
+    a[i] = arr[left + i];
   }
-  for (int i = 0; i < m; i++) {
-    b[i] = arr[mid + l + i];
+
+  for (int i = 0; i < m; i++)
+  {
+    b[i] = arr[mid + left + i];
   }
-  int i = 0;
-  int j = 0;
-  int k = l;
-  while (i < n && j < m) {
-    if (a[i] < b[j]) {
+  
+  int i = 0, j = 0, k = left;
+  while (i < n && j < m)
+  {
+    if (a[i] < b[j])
+    {
       arr[k] = a[i];
       k++;
       i++;
-    } else {
+    }
+    else
+    {
       arr[k] = b[j];
       k++;
       j++;
     }
   }
-  while (i < n) {
+  while (i < n)
+  {
     arr[k] = a[i];
     k++;
     i++;
   }
-  while (i < m) {
+  while (i < m)
+  {
     arr[k] = b[j];
     k++;
     j++;
   }
 }
-void mergesort(int arr[], int l, int r) {
-  if (l < r) {
-    int mid = (l + r) / 2;
-    mergesort(arr, l, mid);
-    mergesort(arr, mid + 1, r);
 
-    merge(arr, l, mid, r);
+void mergesort(int arr[], int left, int right)
+{
+  if (left < right)
+  {
+    int mid = (left + right) / 2;
+    mergesort(arr, left, mid);
+    mergesort(arr, mid + 1, right);
+
+    merge(arr, left, mid, right);
   }
 }
 
-int main() {
+int main()
+{
   int arr[] = {5, 4, 3, 2, 1};
   mergesort(arr, 0, 4);
   for (int i = 0; i < 5; i++)
