@@ -19,6 +19,47 @@ public:
         
         return '-';
     }
+
+    //Better code quality
+    char findTheDifference2(string s, string t) {
+        unordered_map<char, int> hashMap;
+        for (auto i : t) {
+            hashMap[i]++;
+        }
+        for (auto i : s) {
+            const bool found = hashMap.count(i);
+            if (found) {
+                hashMap[i]--;
+            }
+        }
+        for (auto key : hashMap) {
+            if (key.second) {
+                return key.first;
+            }
+        }
+        return '-';
+    }
+
+    //Sum of both strings
+    char findTheDifference3(string s, string t) {
+		int sum1 = 0;
+		int sum2 = t[s.size()];
+		for(int i = 0; i < s.length(); i++){
+			sum1 += s[i];
+			sum2 += t[i];
+		}
+		return char(abs(sum2 - sum1));
+	}
+
+    //Using XOR
+    char findTheDifference4(string s, string t) {
+		char res = t[s.size()];
+		for(int i = 0; i < s.size(); i++){
+			res ^= s[i] ^ t[i];
+		}
+		return res;
+	}
+
 };
 
 int main(){
