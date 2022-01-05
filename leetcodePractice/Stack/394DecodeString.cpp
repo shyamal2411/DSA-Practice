@@ -4,6 +4,49 @@ using namespace std;
 // https://leetcode.com/problems/decode-string/
 class Solution {
 public:
+    // Helper function to repeat substring a number of times:
+    string repeat(string str, int times) {
+        string res = "";
+        for (int i=0; i<times; i++)
+            res += str;
+        return res;
+    }
+    
+    string decodeString(string s) {
+        int i=0;
+        while (i < s.size()) {
+            if (s[i] != ']') {
+                i++;
+                continue;
+            }
+            
+            // When we get to closing parenthesis,
+            // we will look back to get the letters to repeat and the number of times
+            // then we replace the original part in the string and place i after that to continue.
+            int j = i;
+            while (s[j] != '[') // Extract letters
+                j--;
+        
+            string lettersToRepeat = s.substr(j+1, i-j-1);
+            int k = j;
+            j--;
+            while ((j > 0) &&(isdigit(s[j]))) // Before opening parethesis we get the number
+                j--;
+            
+            if (j != 0) j++; // Edge case where we are at the beginning of the string
+            int timeToRepeat = stoi(s.substr(j, k-j));
+            
+            s.replace(j, i-j+1, repeat(lettersToRepeat, timeToRepeat));
+			
+            // Put i in the right place now
+            i = j+lettersToRepeat.size()*timeToRepeat;
+        }
+        return s;
+    }
+};
+
+class Solution {
+public:
     string decodeString(string s) {
         int i = 0;
         return help(s, i);
