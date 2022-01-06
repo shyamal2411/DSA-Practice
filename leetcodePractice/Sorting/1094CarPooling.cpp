@@ -2,6 +2,7 @@
 using namespace std;
 
 // https://leetcode.com/problems/car-pooling/
+// https://leetcode.com/problems/car-pooling/discuss/1670052/C%2B%2B-or-2-Approaches-or-priority-queue-or-with-intuition-or-Easy-to-understand-explanation-or-STL
 class Solution {
 public:
 // Time: O(nlogn)
