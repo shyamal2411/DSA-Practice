@@ -2,6 +2,35 @@
 using namespace std;
 
 // https://leetcode.com/problems/can-place-flowers/
+
+// BETTER SOLUTION
+class Solution {
+public:
+    bool canPlaceFlowers(vector<int>& nums, int n) {
+      int total = 0;
+        for(int i = 0; i < nums.size() && total < n; i++){
+            
+            //if we encounter 0, check for next & prev index
+            if(nums[i] == 0){
+                
+                // if we reach last index, then consider next to be 0, otherwise for regular cases consider next index
+                int next = (i == nums.size() - 1) ? 0 : nums[i+1];
+                //same for 1st index, consider prev index as 0, same for regular cases
+                int prev = (i == 0) ? 0 : nums[i-1];
+     
+                //now if both next and prev are 0, make current index as 1, increment total
+                if(next == 0 && prev == 0)
+                {
+                    nums[i]= 1;
+                    total++;
+                }
+            }
+        }
+        //if total equals the given n, true else false
+        return total == n;
+    }
+};
+
 class Solution {
 public:
     bool canPlaceFlowers(vector<int>& nums, int n) {
@@ -23,6 +52,7 @@ public:
 
     }
 };
+
 
 int main(){
     Solution s;
