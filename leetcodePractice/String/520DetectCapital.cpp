@@ -1,3 +1,18 @@
+#include<bits/stdc++.h> 
+using namespace std;
+
+// https://leetcode.com/problems/detect-capital/
+class Solutionn{
+  public:
+bool detectCapitalUse(string word) {
+    for(int i = 1; i < word.size(); i++){
+        if(isupper(word[1]) != isupper(word[i]) || 
+           islower(word[0]) && isupper(word[i])) return false;
+    }        
+    return true;
+}
+};
+
 class Solution {
  public:
   // util functions avoiding redundancy
@@ -53,3 +68,11 @@ class Solution {
     //   return false;
   }
 };
+
+
+int main(){
+    Solution ss;
+    string word="USA";
+    cout<<ss.detectCapitalUse(word);
+    return 0;
+}
