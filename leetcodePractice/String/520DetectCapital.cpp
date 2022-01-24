@@ -2,6 +2,7 @@
 using namespace std;
 
 // https://leetcode.com/problems/detect-capital/
+// https://leetcode.com/problems/detect-capital/discuss/767479/C%2B%2B-Expressive-Modern-C%2B%2B-or-O(n)-or-2-lines-or-No-loops-just-English-less-bugs
 class Solutionn{
   public:
 bool detectCapitalUse(string word) {
