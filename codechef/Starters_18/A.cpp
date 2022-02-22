@@ -10,7 +10,7 @@ typedef vector<int> vi;
 #define FIO ios_base::sync_with_stdio(false);cin.tie(NULL);cin.tie(0);cout.tie(0);
 #define read(arr,n) for(int i=0;i<n;i++)cin>>arr[i];
 #define pr(arr,n) for(int i=0;i<n;i++)cout<<arr[i];
-#define in cin>>
+#define in cin>> 
 #define out cout<<
 #define first fr
 #define second sc
