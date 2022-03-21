@@ -2,65 +2,35 @@
 using namespace std;
 
 // https://leetcode.com/problems/partition-labels/
+// https://leetcode.com/problems/partition-labels/discuss/1868750/C%2B%2B-oror-Explained-Visually-oror-O(n)-oror-O(1)-oror-Two-Pointers
 class Solution {
 public:
-   // Greedy approach
     vector<int> partitionLabels(string s) {
-        int n = s.size();
+		
+        vector<int> endInd(26,0);
+        
+        for(int i = 0; i < s.length(); ++i)
+            endInd[s[i] - 'a']  = i;
+        
         vector<int> ans;
-        
-        if(n == 0) return ans;
-        
-        // find the last position of each letter in the string.
-        vector<int> last_pos (26, -1);
-        
-        for(int i=n-1; i>=0; --i) {
-            if(last_pos[s[i]-'a'] == -1)
-                last_pos[s[i]-'a'] = i;
-        }
-        
-        // minp is the min pos we need to consider in a partition.
-        // plen is the length of the partition.
-        int minp = -1, plen = 0;
-        
-        for(int i=0; i<n; ++i) {
-            int lp = last_pos[s[i]-'a'];
-            // Extend the current partition to consider this character's last pos.
-            minp = max(minp, lp);
-            // Increase the len of this partition.
-            ++plen;
+        int start = 0, end = 0;
+
+        for(int i = 0; i < s.length(); ++i)
+        {
+		// whenever we get an character we check,
+		// last index of that character
+            end = max(end, endInd[s[i] - 'a']);
             
-            // if the current pos of a character equals
-            // the min pos we need to enclose in the current partition,
-            // then we have reached the end of this partition.
-            if(i == minp) {
-                // store the partition's len and reset the variables.
-                ans.push_back(plen);
-                minp = -1;
-                plen = 0;
+			// when current i.e i == end, add it to result
+            if( i == end)
+            {
+                // all the characters of current partition included
+                ans.push_back(i - start + 1);
+				// update the start pointer for fresh start
+                start = i + 1;
             }
         }
-        
         return ans;
-    }
-};
-class Solution {
-public:
-    vector<int> partitionLabels(string S) {
-        vector<int> last(26,0);
-        for(int i=0;i<S.size();i++) 
-            last[S[i]-'a']=i;
-        
-        vector<int> res;
-        int j=0,k=0;
-        for(int i=0;i<S.size();i++) {
-            j = max(j, last[S[i]-'a']);
-            if(i==j) {
-                res.push_back(i-k+1);
-                k=i+1;
-            }
-        }
-        return res;
     }
 };
 
