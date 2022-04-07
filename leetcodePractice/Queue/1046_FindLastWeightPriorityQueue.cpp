@@ -17,6 +17,24 @@ public:
         }
         return pq.empty() ? 0 : pq.top();
     }
+     
+    //  Using Sorting
+     int lastStoneWeightSort(vector<int>& s) {
+        sort(s.begin(), s.end());   
+        while(s.size() > 1){
+            int i = s.size() - 1;
+            int x = s[i], y = s[i-1];
+            s.pop_back();
+            s.pop_back();
+            
+            if(x != y)
+                s.push_back(x - y);
+            sort(s.begin(), s.end());
+        }
+        if(s.size() == 0) return 0;
+        
+        return s[0];
+    }
 };
 
 // https://leetcode.com/problems/last-stone-weight/discuss/1921100/Simple-easy-c%2B%2B-solution
