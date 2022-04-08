@@ -50,13 +50,35 @@ void SMOL(){
     cout<<n<<endl;
     else
     cout<<n%k<<endl;
+}
+
+void WEIGHTBL(){
+    int w1, w2, x1, x2, m;
+    cin>>w1>>w2>>x1>>x2>>m;
+    int ans = m * (w2-w1);
+    if(x2-x1 > ans || x2 - x1 < ans)
+    cout<<"0\n";
+    else
+    cout<<"1\n"<<endl;
+}
+
+void WEIGHTBL2(){
+    int w1, w2, x1, x2, m;
+    cin>>w1>>w2>>x1>>x2>>m;
     
+    int min1 = w1 + (x1 * m);
+    int min2 = w1 + (x2 * m);
+
+    if(min1 <= w2 && min2 >= w2)
+    cout<<"1\n";
+    else
+    cout<<"0\n";
 }
 
 int32_t main(){
     FIO int t; t=1;
     in t;
-    while(t--) CHFSPL();
+    while(t--) WEIGHTBL2();
   
 return 0;
 }
