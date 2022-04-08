@@ -75,10 +75,20 @@ void WEIGHTBL2(){
     cout<<"0\n";
 }
 
+void CSTOCK(){
+    double s,a,b,c, per = 0;
+    cin>>s>>a>>b>>c;
+    s=s+(s*c)/100.00;
+	if(s>=a && s<=b)
+    cout<<"Yes\n";
+    else
+    cout<<"No\n";
+}
+
 int32_t main(){
     FIO int t; t=1;
     in t;
-    while(t--) WEIGHTBL2();
+    while(t--) CSTOCK();
   
 return 0;
 }
