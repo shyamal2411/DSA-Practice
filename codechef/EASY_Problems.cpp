@@ -85,10 +85,19 @@ void CSTOCK(){
     cout<<"No\n";
 }
 
+void MXEVNSUB(){
+    int n; cin>>n;
+    int sum = (n * (n + 1)) / 2;
+    if(sum % 2)
+    cout<<n - 1<<endl;
+    else
+    cout<<n<<endl;
+}
+
 int32_t main(){
     FIO int t; t=1;
     in t;
-    while(t--) CSTOCK();
+    while(t--) MXEVNSUB();
   
 return 0;
 }
