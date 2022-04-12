@@ -94,10 +94,16 @@ void MXEVNSUB(){
     cout<<n<<endl;
 }
 
+void MANYSUMS(){
+    int n;  cin >> n;
+    for(int i = 0; i < n; i++){
+    }
+}
+
 int32_t main(){
     FIO int t; t=1;
     in t;
-    while(t--) MXEVNSUB();
+    while(t--) MANYSUMS();
   
 return 0;
 }
