@@ -1,7 +1,7 @@
 #include<bits/stdc++.h> 
 using namespace std;
 
-
+// https://leetcode.com/problems/palindromic-substrings/
 class Solution {
 public:
     int count = 0;
@@ -16,7 +16,7 @@ public:
             if(s[start++] != s[end--]){
                 return false;}
         }
-        return false;
+        return true;
     }
     
     int countSubstrings(string s) {
