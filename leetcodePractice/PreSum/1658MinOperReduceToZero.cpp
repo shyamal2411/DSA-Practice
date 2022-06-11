@@ -26,6 +26,24 @@ public:
         }
         return found ? n - maxLen : - 1;
     }
+
+    int minOperations1(vector<int>& nums, int x) {
+    int sum = accumulate(begin(nums), end(nums), 0);
+    int left = 0, right = 0, ans = INT_MAX, n = nums.size();
+    while (left <= right)
+        if (sum >= x) {
+            if (sum == x)
+                ans = min(ans, left + n - right);
+            if (right < n)
+                sum -= nums[right++];
+            else
+                break;
+        }
+        else
+            sum += nums[left++];
+    return ans == INT_MAX ? -1 : ans;
+    }
+
 };
 
 int main(){
