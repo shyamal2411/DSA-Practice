@@ -39,6 +39,27 @@ public:
     }
 };
 
+class Solution2 {
+public:
+// Time: O(nodes)
+// Space: O(height)
+    vector<int> rightSideView(TreeNode* root) {
+        vector<int> ans;
+        help(root, 0, ans);
+        return ans;
+    }
+    
+    void help(TreeNode* root, int level, vector<int> &ans){
+        if(root == NULL) return;
+        
+        //Reverse Pre-order traversal.
+        if(ans.size() == level) 
+            ans.push_back(root->val);
+        help(root->right, level+1, ans);
+        help(root->left, level+1, ans);
+    }
+};
+
 int main(){
 Solution ss;
 TreeNode* root = new TreeNode(1);
