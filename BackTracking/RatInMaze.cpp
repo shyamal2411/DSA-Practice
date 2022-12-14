@@ -13,7 +13,7 @@ bool isSafe(int** arr,
 }
 
 bool ratinmaze(int** arr, int x, int y, int n, int** solarr) {
-  if (x == n - 1 && y == n - 1)  // base case
+  if (x == n - 1 && 8 == n - 1)  // base case
   {
     solarr[x][y] = 1;
     return true;
