@@ -11,6 +11,7 @@ struct array {
   if(arr->length<arr->size)
   arr->A[arr->length++]=x;
 }*/
+// this is the second code to be written on the codespaces powered by github
 
 void display(struct array arr)
 {
