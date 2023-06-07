@@ -13,7 +13,7 @@ void display(struct array arr)
   for(i=0;i<arr.length;i++)
   printf("%d",arr.a[i]);
 }
-
+// this can be the second code for the github codespaces.
 int main()
 {
     int i;
