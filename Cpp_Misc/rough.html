@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+    <script>
+        $(function(){
+            var listsample = $("li");
+            var firstSelect = listsample.eq(0);
+            var secondSelect = listsample.eq(2);
+            console.log(firstSelect.html() + " and " + secondSelect.html());
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+    </ul>
+</body>
+</html>

@@ -10,7 +10,7 @@ class javaPrac{
         
         person p2 = new person();
         p2.age = 25;
-        p2.name = "chutiyo";
+        p2.name = "Prajapati";
 
         System.out.println(p1.age + " " + p1.name);
         System.out.println(p2.age + " " + p2.name);
