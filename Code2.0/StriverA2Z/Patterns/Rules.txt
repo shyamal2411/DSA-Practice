@@ -1,0 +1,10 @@
+Patterns - Nested Loops
+ - Won't be asked in companies but highly needed in holding command in Loops
+ and loop count up to interviews - solving problems
+
+ RULES:
+ 1. For the outer loop, count the number of lines
+ 2. For the inner loop, focus on the columns
+    Connect them somehow to the rows.
+ 3. Whatever you're printing, print them inside the inner loop
+ 4. Observe symmetry [optional, applicable only for some patterns]
